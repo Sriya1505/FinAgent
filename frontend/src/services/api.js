@@ -1615,107 +1615,144 @@ export const api = {
     const bal = inc - exp;
     const low = message.toLowerCase().trim();
 
-    const badges = {
-      o3mini: '🧠 Powered by Finny o3-mini · OpenAI Deep Reasoning',
-      gpt4: '⚡ Powered by Finny GPT-4o · Precision & Code Engine',
-      claude37: '🟣 Powered by Finny Claude 3.7 Sonnet · Hybrid Reasoning',
-      claude: '🟠 Powered by Finny Claude 3.5 Sonnet · Anthropic Advisor',
-      gemini25: '🔵 Powered by Finny Gemini 2.5 Pro · Deep Multimodal',
-      gemini: '⚡ Powered by Finny Gemini 2.0 Flash · Ultra-Fast (0.05s)',
-      deepseek: '🌌 Powered by Finny DeepSeek-R1 · Transparent CoT',
-      auto: '⚡ Finny Auto-Router · Multi-Agent Consensus Active'
+    const getCatSpend = (catPattern) => {
+      return userTxs
+        .filter(t => t.type === 'expense' && (t.category || '').toLowerCase().includes(catPattern.toLowerCase()))
+        .reduce((sum, t) => sum + Number(t.amount || 0), 0);
     };
-    const proof = badges[agentModel] || badges.auto;
+
+    const hasFinanceKeyword = (
+      low.includes('spend') || low.includes('spent') || low.includes('expense') ||
+      low.includes('budget') || low.includes('balance') || low.includes('afford') ||
+      low.includes('cost') || low.includes('save') || low.includes('saving') ||
+      low.includes('goal') || low.includes('money') || low.includes('rupee') ||
+      low.includes('₹') || low.includes('50/30/20') || low.includes('emergency fund') ||
+      low.includes('income') || low.includes('salary') || low.includes('food') ||
+      low.includes('travel') || low.includes('shopping') || low.includes('bills') ||
+      low.includes('rent') || low.includes('investment')
+    );
+
+    const hasGreeting = low.startsWith('hi') || low.startsWith('hello') || low.startsWith('hey') || low.includes('good morning') || low.includes('good evening') || low.includes('good afternoon');
 
     let text = "";
-    if (low.startsWith('hi') || low.startsWith('hello') || low.startsWith('hey') || low.includes('greetings')) {
-      const pleasantry = (low.includes('how are you') || low.includes('how r u') || low.includes("how's it going")) ? "I'm doing fantastic, thank you! 😊 " : "";
-      if (agentModel === 'o3mini') {
-        text = `${pleasantry}Hello ${userName}! 🧠 Finny o3-mini deep reasoning engine active. Ready for step-by-step financial derivations, tax optimization, or compound interest planning. What complex question are we tackling today?`;
-      } else if (agentModel === 'gpt4') {
-        text = `${pleasantry}Hey ${userName}! ⚡ Finny GPT-4o precision engine active. I'm ready to calculate balances, optimize your budget formulas, or analyze your cash flow. What are we calculating today?`;
-      } else if (agentModel === 'claude37') {
-        text = `${pleasantry}Hello ${userName}! 🟣 Finny Claude 3.7 Sonnet online. Combining hybrid analytical rigor with empathetic behavioral finance to build sustainable wealth. How are you doing today?`;
-      } else if (agentModel === 'gemini25') {
-        text = `${pleasantry}Hello ${userName}! 🔵 Finny Gemini 2.5 Pro online. Tracking your multi-horizon ledger trends, document synthesis, and forward-looking runway forecasts. What shall we explore today?`;
-      } else if (agentModel === 'gemini') {
-        text = `${pleasantry}Hey ${userName}! ⚡ Finny Gemini 2.0 Flash online at sub-100ms speed. Category pulse-checks, real-time velocity, and instant financial tracking. What's on your mind?`;
-      } else if (agentModel === 'deepseek') {
-        text = `${pleasantry}Hello ${userName}! 🌌 Finny DeepSeek-R1 open reasoning active. Step-by-step chain-of-thought analysis to eliminate financial leakages with zero arithmetic hallucination. How can I help you today?`;
+
+    // ==========================================
+    // 1. CASUAL CONVERSATION (Mode 1)
+    // ==========================================
+    if (!hasFinanceKeyword && (low.includes('how are you') || low.includes('how r u') || low.includes("how's it going") || low.includes("how do you do"))) {
+      // Test 2: "How are you?"
+      text = "I'm doing really well, thanks for asking! How are you doing today?";
+    } else if (!hasFinanceKeyword && (hasGreeting || low === 'hi finny' || low === 'hey finny' || low === 'hello finny')) {
+      // Test 1: "Hi Finny" -> Short, friendly greeting back. No financial numbers or lecture.
+      const greetings = [
+        "Hey there! Great to see you. How's your day going?",
+        "Hi! Good to see you today. What's on your mind?",
+        "Hello! Always happy to see you. How are you doing?"
+      ];
+      text = greetings[Math.floor(Math.random() * greetings.length)];
+    } else if (low.includes('thank') || low.includes('thanks') || low.includes('that helped') || low.includes('appreciate it')) {
+      // Test 3: "Thanks, that helped!"
+      text = "You're so welcome! Glad I could help. Let me know if you need anything else! 💚";
+    } else if (low.includes('stressed') || low.includes('anxious') || low.includes('overwhelmed') || low.includes('worried about money') || low.includes('stress')) {
+      // Test 4: "I'm stressed about money"
+      text = "Money stress is really tough, and it's completely normal to feel overwhelmed sometimes. Take a deep breath. Whenever you're ready, we can take a gentle look at your budget or recent spending together—no pressure at all.";
+    } else if (low.includes('joke') || low.includes('funny') || low.includes('make me laugh')) {
+      // Test 5: "Tell me a joke"
+      const jokes = [
+        "Why did the dollar bill go to therapy? Because it had too much stress and couldn't hold its value anymore! 😄",
+        "Why did the piggy bank get hired? Because it had exceptional savings skills and never wasted a dime! 🐷",
+        "Why don't coins ever get lonely? Because they always travel in change! 🪙"
+      ];
+      text = jokes[Math.floor(Math.random() * jokes.length)];
+    } else if (low.includes('who are you') || low.includes('what is your name') || low.includes('who r u')) {
+      // Test 7: "Who are you?"
+      text = "I'm Finny, your friendly AI companion inside FinAgent! I talk like a supportive friend, not a bank. I'm here to chat, keep you company, and help you understand your spending and reach your financial goals whenever you want.";
+    } else if (low.includes('what can you do') || low.includes('how can you help') || low.includes('what do you do')) {
+      text = "I can help you understand where your money is going, set up realistic budgets, plan savings goals, and check if you can afford upcoming purchases. Or we can just chat whenever you'd like!";
+    }
+
+    // ==========================================
+    // 2. FINANCE QUESTIONS (Mode 2)
+    // ==========================================
+    else if (low.includes('food') || low.includes('dining') || low.includes('groceries') || low.includes('eating')) {
+      // Test 6: "Hey, how much did I spend on food?" (Mixed or pure)
+      const foodSpend = getCatSpend('food') + getCatSpend('dining') + getCatSpend('groceries');
+      const greetPrefix = hasGreeting ? "Hey! " : "";
+      if (foodSpend > 0) {
+        text = `${greetPrefix}You've spent ₹${foodSpend.toLocaleString('en-IN')} on food and dining this month.`;
       } else {
-        text = `${pleasantry}Hey ${userName}! 😊 I'm ready to help you review your finances, check category budgets, or plan monthly savings. How are you doing today?`;
+        text = `${greetPrefix}You haven't recorded any spending on food this month yet.`;
       }
-    } else if (/\b(wt|what|wat)\s*(are|r)\s*(you|u)\s*(doing|up to)\b/i.test(low) || low.includes('doing what') || /\b(i'?m|i am)\s*(good|fine|great|doing well|well|okay|ok)\b/i.test(low)) {
-      const acknowledged = /\b(i'?m|i am)\s*(good|fine|great|doing well|well|okay|ok)\b/i.test(low) ? "Glad to hear you're doing well! 😊 " : "";
-      if (/\b(wt|what|wat)\s*(are|r)\s*(you|u)\s*(doing|up to)\b/i.test(low) || low.includes('doing what')) {
-        text = `${acknowledged}Right now, I'm actively auditing your financial telemetry and keeping your ledger balanced in real-time!\n\n` +
-          `**Live Financial Pulse:**\n` +
-          `- 💰 **Liquid Balance**: ₹${bal.toLocaleString('en-IN')}\n` +
-          `- 📈 **Monthly Inflow**: ₹${inc.toLocaleString('en-IN')}\n` +
-          `- 📉 **Monthly Outflow**: ₹${exp.toLocaleString('en-IN')} across ${userTxs.filter(t => t.type === 'expense').length} recorded expense transactions\n` +
-          `- 🛡️ **Category Sentinel**: Actively auditing your spending categories\n\n` +
-          `I'm ready whenever you want to test models, optimize budgets, or calculate savings. What would you like to explore?`;
-      } else {
-        text = `${acknowledged}I'm right here with you! Your verified liquid balance is ₹${bal.toLocaleString('en-IN')} with ₹${inc.toLocaleString('en-IN')} income. How can I help you today?`;
-      }
+    } else if (low.includes('travel') || low.includes('transit') || low.includes('cab') || low.includes('flight') || low.includes('fuel')) {
+      const travelSpend = getCatSpend('travel') + getCatSpend('transit') + getCatSpend('fuel');
+      const greetPrefix = hasGreeting ? "Hey! " : "";
+      text = `${greetPrefix}You've spent ₹${travelSpend.toLocaleString('en-IN')} on travel this month.`;
+    } else if (low.includes('shopping')) {
+      const shopSpend = getCatSpend('shopping');
+      const greetPrefix = hasGreeting ? "Hey! " : "";
+      text = `${greetPrefix}You've spent ₹${shopSpend.toLocaleString('en-IN')} on shopping this month.`;
     } else if (low.includes('% of') || /(\d+(?:\.\d+)?)\s*%\s*(?:of)?\s*(\d+(?:,\d+)*(?:\.\d+)?)/.test(low)) {
       const m = low.match(/(\d+(?:\.\d+)?)\s*%\s*(?:of)?\s*(\d+(?:,\d+)*(?:\.\d+)?)/);
       if (m) {
         const pct = parseFloat(m[1]);
         const base = parseFloat(m[2].replace(/,/g, ''));
         const result = (pct / 100) * base;
-        text = `### 🧮 Mathematical Calculation\n\n**${pct}% of ₹${base.toLocaleString('en-IN')} = ₹${result.toLocaleString('en-IN')}**\n\n- **Formula**: \`(${pct} / 100) * ${base.toLocaleString('en-IN')} = ${result.toLocaleString('en-IN')}\`\n- **Deterministic Result**: **₹${result.toLocaleString('en-IN')}**`;
-        if (pct === 20) {
-          text += `\n\n💡 *Financial Context*: If this is your monthly savings target from ₹${base.toLocaleString('en-IN')}, setting aside **₹${result.toLocaleString('en-IN')}** fulfills the recommended 20% savings rule!`;
-        }
+        text = `${pct}% of ₹${base.toLocaleString('en-IN')} is **₹${result.toLocaleString('en-IN')}**.\n\n` +
+               (pct === 20 ? `💡 Setting aside 20% (₹${result.toLocaleString('en-IN')}) is a great monthly savings target!` : '');
       } else {
-        text = `Please provide the percentage and amount, for example: "20% of 85000".`;
+        text = "Please specify the percentage and amount, for example: '20% of 50000'.";
       }
     } else if (low.includes('50/30/20') || low.includes('50 30 20')) {
-      const baseInc = inc > 0 ? inc : 20000;
-      text = `### 📊 The 50/30/20 Budgeting Framework\n\n` +
-        `The 50/30/20 rule divides your take-home income into three essential buckets:\n\n` +
-        `1. **Needs (50%)**: Essential living expenses (Rent, groceries, utilities, transit).\n` +
-        `2. **Wants (30%)**: Lifestyle spending (Dining out, streaming, shopping, hobbies).\n` +
-        `3. **Savings & Debt (20%)**: Wealth building (Emergency fund, investments, debt payoff).\n\n` +
-        `**Applied to your monthly income of ₹${baseInc.toLocaleString('en-IN')}:**\n` +
-        `- 🏠 **Needs (50%)**: **₹${Math.round(baseInc * 0.50).toLocaleString('en-IN')}**\n` +
-        `- ☕ **Wants (30%)**: **₹${Math.round(baseInc * 0.30).toLocaleString('en-IN')}**\n` +
-        `- 💰 **Savings (20%)**: **₹${Math.round(baseInc * 0.20).toLocaleString('en-IN')}**`;
+      const baseInc = inc > 0 ? inc : 25000;
+      text = `### 📊 The 50/30/20 Framework\n\n` +
+        `Based on your monthly income of ₹${baseInc.toLocaleString('en-IN')}:\n` +
+        `- 🏠 **Needs (50%)**: ₹${Math.round(baseInc * 0.50).toLocaleString('en-IN')} for essentials\n` +
+        `- ☕ **Wants (30%)**: ₹${Math.round(baseInc * 0.30).toLocaleString('en-IN')} for lifestyle\n` +
+        `- 💰 **Savings (20%)**: ₹${Math.round(baseInc * 0.20).toLocaleString('en-IN')} towards goals`;
     } else if (low.includes('emergency fund')) {
-      const monthlyBurn = exp > 0 ? exp : 6400;
-      text = `### 🛡️ Emergency Fund Planning\n\n` +
-        `An emergency fund protects you against unexpected expenses:\n\n` +
-        `- **Recommended Buffer**: 3 to 6 months of mandatory living expenses.\n` +
-        `- **Your Monthly Outflow Baseline**: ₹${monthlyBurn.toLocaleString('en-IN')}\n` +
-        `- **3-Month Minimum Buffer**: **₹${(monthlyBurn * 3).toLocaleString('en-IN')}**\n` +
-        `- **6-Month Robust Buffer**: **₹${(monthlyBurn * 6).toLocaleString('en-IN')}**\n\n` +
-        `Currently, your liquid ledger balance is **₹${bal.toLocaleString('en-IN')}**.`;
+      const monthlyBurn = exp > 0 ? exp : 10000;
+      text = `An emergency fund should cover 3 to 6 months of expenses:\n` +
+        `- **3-Month Target**: ₹${(monthlyBurn * 3).toLocaleString('en-IN')}\n` +
+        `- **6-Month Target**: ₹${(monthlyBurn * 6).toLocaleString('en-IN')}\n\n` +
+        `Your current balance is ₹${bal.toLocaleString('en-IN')}.`;
     } else if (low.includes('can i afford') || low.includes('can i buy') || low.includes('should i buy')) {
       const itemMatch = low.match(/(\d+(?:,\d+)*(?:\.\d+)?)/);
       const itemAmt = itemMatch ? parseFloat(itemMatch[1].replace(/,/g, '')) : 0;
       if (itemAmt > 0) {
         if (bal >= itemAmt * 1.5) {
-          text = `✅ **Feasible Purchase**: At ₹${itemAmt.toLocaleString('en-IN')}, you have comfortable buffer in your balance (₹${bal.toLocaleString('en-IN')}). After this purchase, your remaining balance would be **₹${(bal - itemAmt).toLocaleString('en-IN')}**.`;
+          text = `Yes, you can afford it! At ₹${itemAmt.toLocaleString('en-IN')}, you'll still have ₹${(bal - itemAmt).toLocaleString('en-IN')} in your balance.`;
         } else if (bal >= itemAmt) {
-          text = `⚠️ **Tight Buffer**: Your current balance is ₹${bal.toLocaleString('en-IN')}, which covers the ₹${itemAmt.toLocaleString('en-IN')} purchase, but leaves only **₹${(bal - itemAmt).toLocaleString('en-IN')}** in liquid funds. Consider spacing out discretionary purchases.`;
+          text = `Yes, but it's tight. You have ₹${bal.toLocaleString('en-IN')}, which covers the ₹${itemAmt.toLocaleString('en-IN')}, leaving ₹${(bal - itemAmt).toLocaleString('en-IN')} remaining.`;
         } else {
-          text = `❌ **Out of Current Runway**: The item costs ₹${itemAmt.toLocaleString('en-IN')}, while your current balance is ₹${bal.toLocaleString('en-IN')} (shortfall of ₹${(itemAmt - bal).toLocaleString('en-IN')}). Consider creating a dedicated Savings Goal to fund this responsibly!`;
+          text = `Not right now. The item costs ₹${itemAmt.toLocaleString('en-IN')}, and your current balance is ₹${bal.toLocaleString('en-IN')}. Setting up a savings goal could help fund it!`;
         }
       } else {
-        text = `What is the cost of the item? Your current liquid balance is ₹${bal.toLocaleString('en-IN')}, and I'll verify if it fits comfortably into your budget.`;
+        text = `How much does the item cost? Your current balance is ₹${bal.toLocaleString('en-IN')}, and I can check if it fits comfortably!`;
       }
-    } else if (low.includes('balance') || low.includes('how much left')) {
-      text = `Your verified current balance is ₹${bal.toLocaleString('en-IN')}. Monthly inflow is ₹${inc.toLocaleString('en-IN')} against ₹${exp.toLocaleString('en-IN')} in expenses.`;
-    } else if (low.includes('spend') || low.includes('expense')) {
-      text = `You have spent ₹${exp.toLocaleString('en-IN')} across ${userTxs.filter(t => t.type === 'expense').length} recorded expense transactions this month.`;
+    } else if (low.includes('how much did i spend') || low.includes('how much i spent') || low.includes('my spending') || low.includes('total expense')) {
+      const greetPrefix = hasGreeting ? "Hey! " : "";
+      if (userTxs.length === 0 || exp === 0) {
+        text = `${greetPrefix}You haven't recorded any expenses for this month yet.`;
+      } else {
+        text = `${greetPrefix}You've spent ₹${exp.toLocaleString('en-IN')} so far this month across ${userTxs.filter(t => t.type === 'expense').length} purchases.`;
+      }
+    } else if (low.includes('balance') || low.includes('how much left') || low.includes('my balance')) {
+      const greetPrefix = hasGreeting ? "Hey! " : "";
+      text = `${greetPrefix}Your current balance is ₹${bal.toLocaleString('en-IN')}. You've recorded ₹${inc.toLocaleString('en-IN')} in income and ₹${exp.toLocaleString('en-IN')} in expenses.`;
     } else if (low.includes('save') || low.includes('saving')) {
-      const rec = Math.round(inc * 0.20);
-      text = `Based on your recorded income of ₹${inc.toLocaleString('en-IN')}, a healthy 20% savings target is ₹${rec.toLocaleString('en-IN')}/month.`;
-    } else {
-      text = `I'm here with you! Your verified liquid balance is ₹${bal.toLocaleString('en-IN')} with ₹${inc.toLocaleString('en-IN')} monthly income and ₹${exp.toLocaleString('en-IN')} recorded expenses. Let's optimize your financial runway!`;
+      const rec = Math.round((inc > 0 ? inc : 25000) * 0.20);
+      text = `A healthy 20% savings target based on your income is ₹${rec.toLocaleString('en-IN')} per month.`;
+    } 
+
+    // ==========================================
+    // 3. RANDOM OFF-TOPIC (Mode 1 Fallback)
+    // Test 8: Random off-topic question -> brief answer or polite redirect, never an error, never a money dump.
+    // ==========================================
+    else {
+      text = "That's an interesting question! While general trivia isn't my main focus, I'm always happy to chat or help you explore your personal finances whenever you'd like.";
     }
 
+    const proof = '⚡ Finny AI Companion · Natural Chat Active';
     const words = text.split(' ');
     let idx = 0;
     const interval = setInterval(() => {
@@ -1727,7 +1764,7 @@ export const api = {
         clearInterval(interval);
         if (onDone) onDone({ proof, agent_model: agentModel });
       }
-    }, 35);
+    }, 30);
   },
 
   async getReport(month) {

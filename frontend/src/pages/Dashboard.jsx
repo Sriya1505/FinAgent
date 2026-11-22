@@ -190,15 +190,23 @@ export default function Dashboard({ onAddTx, onUploadCsv, onNavigate, onOpenCale
             </span>
           </div>
           <p className="text-xs sm:text-sm text-slate-200 leading-relaxed font-sans font-medium">
-            {(data.savings_goals || []).some(g => g.progress_pct >= 100)
-              ? "Woohoo! You reached your savings goal. I'm so proud of you!"
-              : (data.budget_utilization_pct > 100)
-                ? "Oops! Your spending is getting a little high. Let's review it together."
-                : (data.recent_anomaly)
-                  ? "I flagged an unusual expense on your ledger. Let's inspect it in AI Insights!"
-                  : (hasTransactions 
-                      ? "Hey! Let's see how your money is doing today! Everything is running smoothly." 
-                      : "Welcome to FinAgent! Upload your bank statements or record an expense to begin.")}
+            {(() => {
+              const hour = new Date().getHours();
+              const timeGreeting = hour < 12 ? 'Good morning' : hour < 17 ? 'Good afternoon' : 'Good evening';
+              if ((data.savings_goals || []).some(g => g.progress_pct >= 100)) {
+                return `Woohoo! You reached a savings goal! I'm so proud of your dedication! 🎉`;
+              }
+              if (data.budget_utilization_pct > 100) {
+                return `${timeGreeting}! Spending is a bit high this month. Let's look over your categories together.`;
+              }
+              if (data.recent_anomaly) {
+                return `${timeGreeting}! I noticed an unusual transaction on your ledger. Take a look when you have a moment.`;
+              }
+              if (hasTransactions) {
+                return `${timeGreeting}! Your finances are running smoothly today. Let me know if you want to explore anything! ✨`;
+              }
+              return `${timeGreeting}! Welcome to FinAgent! Upload a statement or add your first expense whenever you're ready. 🐻`;
+            })()}
           </p>
         </div>
       </div>

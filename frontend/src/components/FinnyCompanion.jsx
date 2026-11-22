@@ -199,24 +199,27 @@ export default function FinnyCompanion({ currentUser, refreshKey, onNavigate }) 
         let bubbleText = '';
         let soundType = 'neutral';
 
+        const hour = new Date().getHours();
+        const timeGreeting = hour < 12 ? 'Good morning' : hour < 17 ? 'Good afternoon' : 'Good evening';
+
         if (txCount === 0) {
           newMood = 'idle';
-          bubbleText = `Hi ${userName}! Welcome to FinAgent! Let's get started by uploading your bank statement or recording your first expense! ✨`;
+          bubbleText = `${timeGreeting}, ${userName}! Welcome to FinAgent! Whenever you're ready, upload a statement or add your first transaction and we'll take it from there. ✨`;
         } else if (budgetUtil > 100) {
           newMood = 'concerned';
           soundType = 'concerned';
-          bubbleText = `Uh oh ${userName}! We've utilized ${budgetUtil.toFixed(0)}% of our monthly budget. Let's pause non-essential spending for the next ${daysLeft} days! 🛡️`;
+          bubbleText = `${timeGreeting}, ${userName}! Quick heads-up: we've used ${budgetUtil.toFixed(0)}% of the monthly budget. Let's take it easy on discretionary purchases for the next few days. 🛡️`;
         } else if (savingsRate >= 20 && balance > 0) {
           newMood = 'celebrating';
           soundType = 'happy';
-          bubbleText = `Woohoo! You have a strong ${savingsRate.toFixed(1)}% savings rate this month! Keep it up, you're crushing it! 🎉`;
+          bubbleText = `${timeGreeting}, ${userName}! You're saving ${savingsRate.toFixed(0)}% of your income this month—that's fantastic momentum! 🎉`;
         } else if (totalBudget > 0 && budgetUtil <= 80) {
           newMood = 'happy';
           soundType = 'happy';
-          bubbleText = `Great discipline! Spending is only ${budgetUtil.toFixed(0)}% of your limit. Safe daily pace: ₹${Number(safeDaily || 0).toLocaleString('en-IN')}/day! 👍`;
+          bubbleText = `${timeGreeting}! Your spending looks steady at ${budgetUtil.toFixed(0)}% of budget. You have about ₹${Number(safeDaily || 0).toLocaleString('en-IN')}/day safe to spend. 👍`;
         } else {
           newMood = 'idle';
-          bubbleText = `Current balance is ₹${Number(balance || 0).toLocaleString('en-IN')}. Need an instant spending analysis? Click me! 🐻`;
+          bubbleText = `${timeGreeting}, ${userName}! Your finances are up to date with ₹${Number(balance || 0).toLocaleString('en-IN')} balance. Let me know if you need anything! 🐻`;
         }
 
         setFinnyState(newMood);
@@ -266,7 +269,7 @@ export default function FinnyCompanion({ currentUser, refreshKey, onNavigate }) 
         {
           message_id: 'fresh_slate',
           role: 'assistant',
-          content: `Fresh slate, ${userName}! Ask me anything across coding, math, general topics, or your finances! 🐻`,
+          content: `Fresh slate, ${userName}! I'm here whenever you want to chat or look at your finances. What's on your mind? 🐻`,
           created_at: new Date().toISOString()
         }
       ]);
