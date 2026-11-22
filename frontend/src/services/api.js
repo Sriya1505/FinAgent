@@ -1,3 +1,5 @@
+import { supabaseAuth, isSupabaseConfigured } from './supabase';
+
 const BASE_URL = '/api';
 
 /**
@@ -1227,47 +1229,78 @@ export const api = {
   // ==========================================
 
   async signup({ name, email, password, confirmPassword }) {
-    const data = await this.authFetch(`${BASE_URL}/auth/signup`, {
-      method: 'POST',
-      body: JSON.stringify({ 
-        name, 
-        email, 
-        password, 
-        confirm_password: confirmPassword 
-      })
-    });
-    // Do not set session on signup - redirect user to login page
-    return data;
+    if (isSupabaseConfigured()) {
+      return await supabaseAuth.signUp({ name, email, password });
+    }
+
+    try {
+      const data = await this.authFetch(`${BASE_URL}/auth/signup`, {
+        method: 'POST',
+        body: JSON.stringify({ 
+          name, 
+          email, 
+          password, 
+          confirm_password: confirmPassword 
+        })
+      });
+      return data;
+    } catch (err) {
+      if (err.message === 'BACKEND_OFFLINE' || err.message.includes('405') || err.message.includes('404')) {
+        return await supabaseAuth.signUp({ name, email, password });
+      }
+      throw err;
+    }
   },
 
   async login({ email, password, rememberMe = true }) {
-    const data = await this.authFetch(`${BASE_URL}/auth/login`, {
-      method: 'POST',
-      body: JSON.stringify({ email, password })
-    });
-    if (data.token && data.user) {
-      this.setSession(data.token, data.user, rememberMe);
-      try {
-        if (rememberMe) {
-          localStorage.setItem('finagent_remembered_email', email.trim());
-          localStorage.setItem('finagent_remember_me', 'true');
-        } else {
-          localStorage.removeItem('finagent_remembered_email');
-          localStorage.setItem('finagent_remember_me', 'false');
-        }
-      } catch (err) {
-        console.warn('Remember me save warning:', err);
+    if (isSupabaseConfigured()) {
+      const data = await supabaseAuth.signIn({ email, password, rememberMe });
+      if (data.token && data.user) {
+        this.setSession(data.token, data.user, rememberMe);
       }
+      return data;
     }
-    return data;
+
+    try {
+      const data = await this.authFetch(`${BASE_URL}/auth/login`, {
+        method: 'POST',
+        body: JSON.stringify({ email, password })
+      });
+      if (data.token && data.user) {
+        this.setSession(data.token, data.user, rememberMe);
+      }
+      return data;
+    } catch (err) {
+      if (err.message === 'BACKEND_OFFLINE' || err.message.includes('405') || err.message.includes('404')) {
+        const data = await supabaseAuth.signIn({ email, password, rememberMe });
+        if (data.token && data.user) {
+          this.setSession(data.token, data.user, rememberMe);
+        }
+        return data;
+      }
+      throw err;
+    }
   },
 
   logout() {
+    supabaseAuth.signOut();
     this.clearSession();
   },
 
   async getMe() {
-    return await this.authFetch(`${BASE_URL}/auth/me`);
+    if (isSupabaseConfigured()) {
+      const session = await supabaseAuth.getSession();
+      if (session && session.user) {
+        return { user: session.user };
+      }
+    }
+    try {
+      return await this.authFetch(`${BASE_URL}/auth/me`);
+    } catch (err) {
+      const current = this.getCurrentUser();
+      if (current) return { user: current };
+      throw err;
+    }
   },
 
   async forgotPassword({ email }) {

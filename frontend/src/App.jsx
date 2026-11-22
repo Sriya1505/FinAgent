@@ -17,6 +17,7 @@ import CalendarModal from './components/CalendarModal';
 import FinnyCompanion from './components/FinnyCompanion';
 import { FinnyProvider } from './components/finny';
 import { api } from './services/api';
+import { supabaseAuth } from './services/supabase';
 
 export default function App() {
   const [currentUser, setCurrentUser] = useState(() => {
@@ -72,6 +73,21 @@ export default function App() {
     };
 
     checkSession();
+
+    // Listen for external auth changes (e.g. Supabase session updates or cross-tab events)
+    const unsubscribe = supabaseAuth.onAuthStateChange((event, session) => {
+      if (session && session.user) {
+        setCurrentUser(session.user);
+        api.setSession(session.token, session.user);
+      } else if (event === 'SIGNED_OUT') {
+        setCurrentUser(null);
+        api.clearSession();
+      }
+    });
+
+    return () => {
+      if (unsubscribe) unsubscribe();
+    };
   }, []);
 
   const triggerRefresh = () => {
