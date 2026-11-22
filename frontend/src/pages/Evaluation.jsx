@@ -272,7 +272,7 @@ export default function Evaluation() {
   ];
 
   return (
-    <div className="p-6 sm:p-8 space-y-8 max-w-7xl mx-auto">
+    <div className="p-4 sm:p-6 md:p-8 space-y-6 sm:space-y-8 max-w-7xl mx-auto overflow-x-hidden">
       
       {/* ================= CREATIVE HERO TELEMETRY HUD ================= */}
       <div className="glass-panel-glow hud-corner p-6 sm:p-8 rounded-3xl border border-cyan-500/30 relative overflow-hidden shadow-2xl bg-gradient-to-br from-[#071329]/90 via-[#050c1b]/95 to-[#040814]">

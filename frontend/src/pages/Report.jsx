@@ -159,7 +159,7 @@ export default function Report({ currentUser }) {
   const { executive_summary, category_breakdown, budget_performance, flagged_anomalies, active_recurring_expenses, savings_goals_status } = report;
 
   return (
-    <div className="p-6 sm:p-8 max-w-5xl mx-auto space-y-6 print:p-0 print:m-0 print:max-w-none print:w-full">
+    <div className="p-4 sm:p-6 md:p-8 max-w-5xl mx-auto space-y-6 overflow-x-hidden print:p-0 print:m-0 print:max-w-none print:w-full">
       
       {/* Action Bar (hidden when printing) */}
       <div className="print:hidden glass-panel-glow hud-corner p-5 rounded-3xl border border-cyan-500/25 shadow-xl space-y-4">

@@ -41,12 +41,12 @@ export function ExpensePredictionModal({
   const adjustedTotal = Math.max(0, Math.round(predicted_total * (1 + simulatedGrowth / 100)));
 
   return (
-    <div className="fixed inset-0 z-50 bg-[#02050e]/85 backdrop-blur-md flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-50 bg-[#02050e]/85 backdrop-blur-md flex items-end sm:items-center justify-center p-0 sm:p-4">
       <motion.div 
         initial={{ opacity: 0, scale: 0.95, y: 15 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.95, y: 15 }}
-        className="glass-panel-glow hud-corner rounded-3xl max-w-2xl w-full p-6 sm:p-7 border border-cyan-500/35 space-y-6 shadow-2xl relative bg-[#091325]/95 max-h-[90vh] overflow-y-auto"
+        className="glass-panel-glow hud-corner rounded-t-3xl sm:rounded-3xl max-w-2xl w-full p-5 sm:p-7 border border-cyan-500/35 space-y-6 shadow-2xl relative bg-[#091325]/95 max-h-[92dvh] sm:max-h-[90vh] overflow-y-auto"
       >
         {/* Header */}
         <div className="flex items-center justify-between pb-4 border-b border-cyan-500/20">
@@ -233,12 +233,12 @@ export function AnomalyDetailModal({
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-[#02050e]/85 backdrop-blur-md flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-50 bg-[#02050e]/85 backdrop-blur-md flex items-end sm:items-center justify-center p-0 sm:p-4">
       <motion.div 
         initial={{ opacity: 0, scale: 0.95, y: 15 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.95, y: 15 }}
-        className="glass-panel-glow hud-corner rounded-3xl max-w-xl w-full p-6 sm:p-7 border border-amber-500/35 space-y-5 shadow-2xl relative bg-[#091325]/95 max-h-[90vh] overflow-y-auto"
+        className="glass-panel-glow hud-corner rounded-t-3xl sm:rounded-3xl max-w-xl w-full p-5 sm:p-7 border border-amber-500/35 space-y-5 shadow-2xl relative bg-[#091325]/95 max-h-[92dvh] sm:max-h-[90vh] overflow-y-auto"
       >
         {/* Header */}
         <div className="flex items-center justify-between pb-4 border-b border-amber-500/20">

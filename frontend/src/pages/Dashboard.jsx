@@ -109,7 +109,7 @@ export default function Dashboard({ onAddTx, onUploadCsv, onNavigate, onOpenCale
   const hasTrends = data.monthly_trends && data.monthly_trends.length > 0;
 
   return (
-    <div className="p-6 sm:p-8 space-y-8 max-w-7xl mx-auto">
+    <div className="p-4 sm:p-6 md:p-8 space-y-6 sm:space-y-8 max-w-7xl mx-auto overflow-x-hidden">
       
       {error && (
         <div className="p-3 bg-amber-500/10 border border-amber-500/30 rounded-2xl text-amber-300 text-xs flex items-center justify-between font-mono">
@@ -119,36 +119,36 @@ export default function Dashboard({ onAddTx, onUploadCsv, onNavigate, onOpenCale
           </div>
           <button 
             onClick={fetchDashboard}
-            className="px-2.5 py-1 bg-amber-500/20 hover:bg-amber-500/30 border border-amber-500/40 rounded-lg text-amber-200 transition-colors cursor-pointer"
+            className="px-2.5 py-1 bg-amber-500/20 hover:bg-amber-500/30 border border-amber-500/40 rounded-lg text-amber-200 transition-colors cursor-pointer min-h-[36px]"
           >
             Retry Connection
           </button>
         </div>
       )}
 
-      {/* Top Quick Actions Bar (Clean, no fake stats/users) */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-end gap-3 pb-1 border-b border-cyan-500/15">
-        <div className="flex items-center gap-2.5">
+      {/* Top Quick Actions Bar */}
+      <div className="flex flex-wrap items-center justify-start sm:justify-end gap-2 pb-2 border-b border-cyan-500/15">
+        <div className="flex flex-wrap items-center gap-2 w-full sm:w-auto">
           {onOpenCalendar && (
             <button
               onClick={onOpenCalendar}
-              className="flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold text-cyan-300 bg-cyan-950/40 border border-cyan-500/30 hover:border-cyan-400 hover:text-white rounded-xl transition-all font-mono cursor-pointer shadow-xs"
+              className="flex-1 sm:flex-initial min-h-[44px] flex items-center justify-center gap-1.5 px-3.5 py-2 text-xs font-semibold text-cyan-300 bg-cyan-950/40 border border-cyan-500/30 hover:border-cyan-400 hover:text-white rounded-xl transition-all font-mono cursor-pointer shadow-xs"
               title="Inspect calendar & transactions by date"
             >
               <Calendar className="w-3.5 h-3.5 text-cyan-400" />
-              <span>Financial Calendar</span>
+              <span>Calendar</span>
             </button>
           )}
           <button
             onClick={onUploadCsv}
-            className="flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold text-slate-300 bg-white/5 border border-white/10 rounded-xl hover:border-cyan-500/40 hover:text-white transition-all font-mono cursor-pointer"
+            className="flex-1 sm:flex-initial min-h-[44px] flex items-center justify-center gap-1.5 px-3.5 py-2 text-xs font-semibold text-slate-300 bg-white/5 border border-white/10 rounded-xl hover:border-cyan-500/40 hover:text-white transition-all font-mono cursor-pointer"
           >
             <UploadCloud className="w-3.5 h-3.5 text-cyan-400" />
-            <span>Upload Documents</span>
+            <span>Upload</span>
           </button>
           <button
             onClick={onAddTx}
-            className="flex items-center gap-1.5 px-4 py-1.5 text-xs font-bold text-slate-950 bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 rounded-xl shadow-md shadow-cyan-500/30 transition-all font-mono cursor-pointer"
+            className="w-full sm:w-auto min-h-[44px] flex items-center justify-center gap-1.5 px-4 py-2 text-xs font-bold text-slate-950 bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 rounded-xl shadow-md shadow-cyan-500/30 transition-all font-mono cursor-pointer"
           >
             <Plus className="w-4 h-4" />
             <span>Add Transaction</span>
@@ -157,7 +157,7 @@ export default function Dashboard({ onAddTx, onUploadCsv, onNavigate, onOpenCale
       </div>
 
       {/* Finny Mascot Real-Time Financial Companion Banner */}
-      <div className="bg-[#081329]/90 border border-purple-500/30 rounded-3xl p-5 sm:p-6 shadow-[0_15px_35px_rgba(0,0,0,0.5),0_0_30px_rgba(168,85,247,0.12)] flex items-center gap-4 sm:gap-6 relative overflow-visible hud-corner">
+      <div className="bg-[#081329]/90 border border-purple-500/30 rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-[0_15px_35px_rgba(0,0,0,0.5),0_0_30px_rgba(168,85,247,0.12)] flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 relative overflow-hidden hud-corner">
         <FinnyMascot
           state={
             (data.savings_goals || []).some(g => g.progress_pct >= 100) 
@@ -169,8 +169,8 @@ export default function Dashboard({ onAddTx, onUploadCsv, onNavigate, onOpenCale
           size="lg"
           interactive={true}
         />
-        <div className="flex-1 space-y-1.5 min-w-0">
-          <div className="flex items-center gap-2">
+        <div className="flex-1 space-y-1.5 min-w-0 text-center sm:text-left">
+          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2">
             <span className="font-extrabold text-white text-base tracking-tight flex items-center gap-2">
               Finny Financial Telemetry
               <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
@@ -579,52 +579,90 @@ export default function Dashboard({ onAddTx, onUploadCsv, onNavigate, onOpenCale
         </div>
 
         {hasTransactions ? (
-          <div className="overflow-x-auto">
-            <table className="w-full text-left text-sm">
-              <thead className="bg-[#050c18] text-slate-400 text-[11px] uppercase font-bold tracking-wider border-b border-cyan-500/15 font-mono">
-                <tr>
-                  <th className="px-6 py-3.5">Date</th>
-                  <th className="px-6 py-3.5">Description</th>
-                  <th className="px-6 py-3.5">Category</th>
-                  <th className="px-6 py-3.5">Type</th>
-                  <th className="px-6 py-3.5 text-right">Amount</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-cyan-500/10">
-                {(transactions.length > 0 ? transactions.slice(0, 6) : (data.recent_transactions || [])).map((tx) => (
-                  <tr 
-                    key={tx.transaction_id || tx.id} 
-                    onClick={() => setInspectTx(tx)}
-                    className="hover:bg-cyan-500/10 transition-colors cursor-pointer group"
-                    title="Click to view details or edit transaction"
-                  >
-                    <td className="px-6 py-3.5 text-xs text-slate-400 font-mono whitespace-nowrap">{tx.date}</td>
-                    <td className="px-6 py-3.5 font-medium text-slate-200 group-hover:text-cyan-300 transition-colors">
-                      {tx.description}
-                    </td>
-                    <td className="px-6 py-3.5">
-                      <span className="px-2.5 py-1 text-xs font-semibold rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/25">
-                        {tx.category}
-                      </span>
-                    </td>
-                    <td className="px-6 py-3.5">
-                      <span className={`px-2 py-0.5 text-[10px] font-bold rounded uppercase font-mono ${
+          <div>
+            {/* Mobile Stacked Cards View (< 640px) */}
+            <div className="block sm:hidden divide-y divide-cyan-500/10">
+              {(transactions.length > 0 ? transactions.slice(0, 6) : (data.recent_transactions || [])).map((tx) => (
+                <div 
+                  key={tx.transaction_id || tx.id} 
+                  onClick={() => setInspectTx(tx)}
+                  className="p-4 hover:bg-cyan-500/10 active:bg-cyan-500/20 transition-colors cursor-pointer space-y-2"
+                >
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="font-bold text-slate-100 text-sm truncate">{tx.description}</span>
+                    <span className={`font-bold font-mono text-sm shrink-0 ${
+                      tx.type === 'income' ? 'text-emerald-400' : 'text-slate-100'
+                    }`}>
+                      {tx.type === 'income' ? '+' : '-'}₹{Number(tx.amount || 0).toLocaleString('en-IN')}
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between text-xs text-slate-400 font-mono">
+                    <span className="px-2.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/25 text-[11px]">
+                      {tx.category}
+                    </span>
+                    <div className="flex items-center gap-2">
+                      <span className={`px-2 py-0.5 text-[10px] font-bold rounded uppercase ${
                         tx.type === 'income' 
                           ? 'bg-emerald-500/15 text-emerald-300 border border-emerald-500/30' 
                           : 'bg-rose-500/15 text-rose-300 border border-rose-500/30'
                       }`}>
                         {tx.type}
                       </span>
-                    </td>
-                    <td className={`px-6 py-3.5 text-right font-bold font-mono ${
-                      tx.type === 'income' ? 'text-emerald-400 glow-text-cyan' : 'text-slate-100'
-                    }`}>
-                      {tx.type === 'income' ? '+' : '-'}₹{(tx.amount || 0).toLocaleString('en-IN')}
-                    </td>
+                      <span>{tx.date}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Desktop Full Table View (>= 640px) */}
+            <div className="hidden sm:block overflow-x-auto">
+              <table className="w-full text-left text-sm">
+                <thead className="bg-[#050c18] text-slate-400 text-[11px] uppercase font-bold tracking-wider border-b border-cyan-500/15 font-mono">
+                  <tr>
+                    <th className="px-6 py-3.5">Date</th>
+                    <th className="px-6 py-3.5">Description</th>
+                    <th className="px-6 py-3.5">Category</th>
+                    <th className="px-6 py-3.5">Type</th>
+                    <th className="px-6 py-3.5 text-right">Amount</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody className="divide-y divide-cyan-500/10">
+                  {(transactions.length > 0 ? transactions.slice(0, 6) : (data.recent_transactions || [])).map((tx) => (
+                    <tr 
+                      key={tx.transaction_id || tx.id} 
+                      onClick={() => setInspectTx(tx)}
+                      className="hover:bg-cyan-500/10 transition-colors cursor-pointer group"
+                      title="Click to view details or edit transaction"
+                    >
+                      <td className="px-6 py-3.5 text-xs text-slate-400 font-mono whitespace-nowrap">{tx.date}</td>
+                      <td className="px-6 py-3.5 font-medium text-slate-200 group-hover:text-cyan-300 transition-colors">
+                        {tx.description}
+                      </td>
+                      <td className="px-6 py-3.5">
+                        <span className="px-2.5 py-1 text-xs font-semibold rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/25">
+                          {tx.category}
+                        </span>
+                      </td>
+                      <td className="px-6 py-3.5">
+                        <span className={`px-2 py-0.5 text-[10px] font-bold rounded uppercase font-mono ${
+                          tx.type === 'income' 
+                            ? 'bg-emerald-500/15 text-emerald-300 border border-emerald-500/30' 
+                            : 'bg-rose-500/15 text-rose-300 border border-rose-500/30'
+                        }`}>
+                          {tx.type}
+                        </span>
+                      </td>
+                      <td className={`px-6 py-3.5 text-right font-bold font-mono ${
+                        tx.type === 'income' ? 'text-emerald-400 glow-text-cyan' : 'text-slate-100'
+                      }`}>
+                        {tx.type === 'income' ? '+' : '-'}₹{(tx.amount || 0).toLocaleString('en-IN')}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         ) : (
           <div className="p-12 text-center space-y-3">

@@ -160,12 +160,12 @@ export default function CalendarModal({
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto bg-black/80 backdrop-blur-md">
+      <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-6 overflow-y-auto bg-black/80 backdrop-blur-md">
         <motion.div
           initial={{ opacity: 0, scale: 0.95, y: 15 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 15 }}
-          className="relative w-full max-w-4xl bg-[#070e1e] border border-cyan-500/30 rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.8),0_0_40px_rgba(6,182,212,0.15)] overflow-hidden flex flex-col max-h-[90vh]"
+          className="relative w-full max-w-4xl bg-[#070e1e] border border-cyan-500/30 rounded-t-3xl sm:rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.8),0_0_40px_rgba(6,182,212,0.15)] overflow-hidden flex flex-col max-h-[92dvh] sm:max-h-[90vh]"
         >
           {/* Top Bar Header */}
           <div className="p-5 sm:p-6 bg-gradient-to-r from-[#0d1c38] via-[#09152b] to-[#060e1d] border-b border-cyan-500/20 flex items-center justify-between shrink-0">

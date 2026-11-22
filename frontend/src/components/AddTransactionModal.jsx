@@ -71,13 +71,13 @@ export default function AddTransactionModal({ isOpen, onClose, onSuccess, initia
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-[#02050e]/80 backdrop-blur-md flex items-center justify-center p-4">
-      <div className="glass-panel-glow hud-corner rounded-2xl max-w-md w-full border border-cyan-500/30 overflow-hidden shadow-2xl relative">
+    <div className="fixed inset-0 z-50 bg-[#02050e]/85 backdrop-blur-md flex items-end sm:items-center justify-center p-0 sm:p-4">
+      <div className="glass-panel-glow hud-corner rounded-t-3xl sm:rounded-2xl max-w-md w-full border border-cyan-500/30 overflow-hidden shadow-2xl relative max-h-[92dvh] sm:max-h-[85vh] flex flex-col">
         {/* Decorative Top Glow */}
         <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
 
         {/* Modal Header */}
-        <div className="px-6 py-4 border-b border-cyan-500/15 flex items-center justify-between bg-[#081224]/70">
+        <div className="px-5 sm:px-6 py-4 border-b border-cyan-500/15 flex items-center justify-between bg-[#081224]/70 shrink-0">
           <div className="flex items-center gap-2.5">
             <div className="w-8 h-8 rounded-lg bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center">
               <Sparkles className="w-4 h-4" />
@@ -91,14 +91,15 @@ export default function AddTransactionModal({ isOpen, onClose, onSuccess, initia
           </div>
           <button 
             onClick={onClose} 
-            className="p-1 rounded-lg text-slate-400 hover:text-white hover:bg-white/10 transition-colors"
+            className="p-2 min-w-[44px] min-h-[44px] rounded-xl text-slate-400 hover:text-white hover:bg-white/10 transition-colors flex items-center justify-center cursor-pointer"
+            aria-label="Close modal"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
         {/* Form Body */}
-        <form onSubmit={handleSubmit} className="p-6 space-y-4">
+        <form onSubmit={handleSubmit} className="p-5 sm:p-6 space-y-4 overflow-y-auto max-h-[calc(90dvh-120px)]">
           {error && (
             <div className="p-3 rounded-lg bg-rose-500/10 border border-rose-500/30 text-rose-300 text-xs flex items-center gap-2">
               <AlertCircle className="w-4 h-4 shrink-0 text-rose-400" />

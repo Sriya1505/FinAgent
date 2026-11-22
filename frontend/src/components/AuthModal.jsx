@@ -178,9 +178,9 @@ export default function AuthModal({ isOpen, onClose, onAuthSuccess, initialView 
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-[#02050e]/85 backdrop-blur-md flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-50 bg-[#02050e]/85 backdrop-blur-md flex items-end sm:items-center justify-center p-0 sm:p-4">
       {/* Modal Container with Cyber Bounding & Glow */}
-      <div className="bg-[#091326]/95 rounded-3xl max-w-md w-full shadow-[0_0_50px_rgba(6,182,212,0.25)] border border-cyan-500/35 overflow-hidden relative hud-corner animate-in fade-in zoom-in-95 duration-200">
+      <div className="bg-[#091326]/95 rounded-t-3xl sm:rounded-3xl max-w-md w-full shadow-[0_0_50px_rgba(6,182,212,0.25)] border border-cyan-500/35 overflow-hidden relative hud-corner animate-in fade-in zoom-in-95 duration-200 max-h-[92dvh] sm:max-h-none overflow-y-auto">
         {/* Top Glow Accent Bar */}
         <div className="h-1.5 bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 shadow-[0_0_15px_#38bdf8]"></div>
 

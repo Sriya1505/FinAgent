@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
+import MobileBottomNav from './components/MobileBottomNav';
 import Dashboard from './pages/Dashboard';
 import Transactions from './pages/Transactions';
 import Budgets from './pages/Budgets';
@@ -28,6 +29,7 @@ export default function App() {
   const [showCalendarModal, setShowCalendarModal] = useState(false);
   const [initialTxDate, setInitialTxDate] = useState(null);
   const [refreshKey, setRefreshKey] = useState(0);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Protected route session verification on mount
   useEffect(() => {
@@ -178,7 +180,7 @@ export default function App() {
 
   return (
     <FinnyProvider>
-      <div className="flex min-h-screen bg-[#040814] bg-cyber-radial cyber-grid-pattern font-sans text-slate-100 antialiased selection:bg-cyan-500 selection:text-black print:bg-white print:text-slate-900 print:block print:min-h-0">
+      <div className="flex min-h-screen bg-[#040814] bg-cyber-radial cyber-grid-pattern font-sans text-slate-100 antialiased selection:bg-cyan-500 selection:text-black print:bg-white print:text-slate-900 print:block print:min-h-0 overflow-x-hidden">
         {/* Sidebar Navigation with User Profile & Logout */}
         <Sidebar 
           activeTab={activeTab} 
@@ -186,10 +188,12 @@ export default function App() {
           currentUser={currentUser}
           onOpenAuth={() => {}}
           onLogout={handleLogout}
+          mobileOpen={mobileMenuOpen}
+          setMobileOpen={setMobileMenuOpen}
         />
 
         {/* Main Content Area */}
-        <div className="flex-1 flex flex-col min-w-0 print:block print:w-full">
+        <div className="flex-1 flex flex-col min-w-0 print:block print:w-full pb-20 md:pb-0 overflow-x-hidden">
           <Header
             title={title}
             subtitle={subtitle}
@@ -202,6 +206,7 @@ export default function App() {
             onOpenAuth={() => {}}
             onLogout={handleLogout}
             onOpenCalendar={() => setShowCalendarModal(true)}
+            onToggleMobileMenu={() => setMobileMenuOpen(prev => !prev)}
           />
 
           <main className="flex-1 overflow-y-auto print:overflow-visible print:block print:w-full print:p-0">
@@ -269,6 +274,13 @@ export default function App() {
             setInitialTxDate(dateStr);
             setShowAddModal(true);
           }}
+        />
+
+        {/* Mobile Fixed Bottom Navigation Bar (< 768px) */}
+        <MobileBottomNav
+          activeTab={activeTab}
+          setActiveTab={setActiveTab}
+          onOpenMore={() => setMobileMenuOpen(true)}
         />
 
         {/* Floating Animated AI Financial Companion Mascot */}

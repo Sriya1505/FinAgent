@@ -636,13 +636,13 @@ export default function Assistant() {
   const currentModelMeta = FINNY_MODELS.find(m => m.id === selectedModel) || FINNY_MODELS[0];
 
   return (
-    <div className="flex h-[calc(100vh-80px)] overflow-hidden bg-[#040814] text-slate-100 font-sans relative">
+    <div className="flex h-[calc(100dvh-75px)] sm:h-[calc(100vh-80px)] overflow-hidden bg-[#040814] text-slate-100 font-sans relative">
       
       {/* ================= 1. LEFT COLLAPSIBLE SIDEBAR ================= */}
       <aside 
         className={`${
-          sidebarOpen ? 'w-72 sm:w-80' : 'w-0'
-        } transition-all duration-300 bg-[#060c18] border-r border-cyan-500/20 flex flex-col shrink-0 overflow-hidden relative z-20`}
+          sidebarOpen ? 'w-72 sm:w-80 fixed inset-y-0 left-0 z-30 sm:relative sm:z-20' : 'w-0'
+        } transition-all duration-300 bg-[#060c18] border-r border-cyan-500/20 flex flex-col shrink-0 overflow-hidden relative`}
       >
         {/* Sidebar Header: New Chat & View Toggle */}
         <div className="p-3.5 border-b border-cyan-500/15 space-y-2.5">

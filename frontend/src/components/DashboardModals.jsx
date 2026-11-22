@@ -29,12 +29,12 @@ export function BalanceHistoryModal({ data, onClose, onNavigate }) {
   const expense = data.monthly_expense || 0;
 
   return (
-    <div className="fixed inset-0 z-50 bg-[#02050e]/85 backdrop-blur-md flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-50 bg-[#02050e]/85 backdrop-blur-md flex items-end sm:items-center justify-center p-0 sm:p-4">
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.95 }}
-        className="glass-panel-glow hud-corner rounded-3xl max-w-lg w-full p-6 border border-cyan-500/35 space-y-5 bg-[#091325]/95 shadow-2xl relative"
+        className="glass-panel-glow hud-corner rounded-t-3xl sm:rounded-3xl max-w-lg w-full p-6 border border-cyan-500/35 space-y-5 bg-[#091325]/95 shadow-2xl relative max-h-[92dvh] sm:max-h-[85vh] overflow-y-auto"
       >
         <div className="flex items-center justify-between pb-3 border-b border-cyan-500/20">
           <div className="flex items-center gap-2.5">
@@ -108,12 +108,12 @@ export function InflowDetailsModal({ transactions = [], onClose, onNavigate }) {
   const totalIncome = incomeTxs.reduce((sum, t) => sum + (t.amount || 0), 0);
 
   return (
-    <div className="fixed inset-0 z-50 bg-[#02050e]/85 backdrop-blur-md flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-50 bg-[#02050e]/85 backdrop-blur-md flex items-end sm:items-center justify-center p-0 sm:p-4">
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.95 }}
-        className="glass-panel-glow hud-corner rounded-3xl max-w-lg w-full p-6 border border-emerald-500/35 space-y-4 bg-[#091325]/95 shadow-2xl relative max-h-[85vh] flex flex-col"
+        className="glass-panel-glow hud-corner rounded-t-3xl sm:rounded-3xl max-w-lg w-full p-6 border border-emerald-500/35 space-y-4 bg-[#091325]/95 shadow-2xl relative max-h-[92dvh] sm:max-h-[85vh] flex flex-col"
       >
         <div className="flex items-center justify-between pb-3 border-b border-emerald-500/20 shrink-0">
           <div className="flex items-center gap-2.5">
@@ -182,12 +182,12 @@ export function OutflowDetailsModal({ transactions = [], categories = [], onClos
   const totalExpense = expenseTxs.reduce((sum, t) => sum + (t.amount || 0), 0);
 
   return (
-    <div className="fixed inset-0 z-50 bg-[#02050e]/85 backdrop-blur-md flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-50 bg-[#02050e]/85 backdrop-blur-md flex items-end sm:items-center justify-center p-0 sm:p-4">
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.95 }}
-        className="glass-panel-glow hud-corner rounded-3xl max-w-lg w-full p-6 border border-rose-500/35 space-y-4 bg-[#091325]/95 shadow-2xl relative max-h-[85vh] flex flex-col"
+        className="glass-panel-glow hud-corner rounded-t-3xl sm:rounded-3xl max-w-lg w-full p-6 border border-rose-500/35 space-y-4 bg-[#091325]/95 shadow-2xl relative max-h-[92dvh] sm:max-h-[85vh] flex flex-col"
       >
         <div className="flex items-center justify-between pb-3 border-b border-rose-500/20 shrink-0">
           <div className="flex items-center gap-2.5">
@@ -256,12 +256,12 @@ export function SavingsBreakdownModal({ data, onClose, onNavigate }) {
   const rate = data.savings_rate_pct || 0;
 
   return (
-    <div className="fixed inset-0 z-50 bg-[#02050e]/85 backdrop-blur-md flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-50 bg-[#02050e]/85 backdrop-blur-md flex items-end sm:items-center justify-center p-0 sm:p-4">
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.95 }}
-        className="glass-panel-glow hud-corner rounded-3xl max-w-lg w-full p-6 border border-blue-500/35 space-y-5 bg-[#091325]/95 shadow-2xl relative"
+        className="glass-panel-glow hud-corner rounded-t-3xl sm:rounded-3xl max-w-lg w-full p-6 border border-blue-500/35 space-y-5 bg-[#091325]/95 shadow-2xl relative max-h-[92dvh] sm:max-h-[85vh] overflow-y-auto"
       >
         <div className="flex items-center justify-between pb-3 border-b border-blue-500/20">
           <div className="flex items-center gap-2.5">
@@ -327,12 +327,12 @@ export function MonthCashflowDetailsModal({ monthData, onClose }) {
   if (!monthData) return null;
 
   return (
-    <div className="fixed inset-0 z-50 bg-[#02050e]/85 backdrop-blur-md flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-50 bg-[#02050e]/85 backdrop-blur-md flex items-end sm:items-center justify-center p-0 sm:p-4">
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.95 }}
-        className="glass-panel-glow hud-corner rounded-3xl max-w-md w-full p-6 border border-cyan-500/35 space-y-4 bg-[#091325]/95 shadow-2xl relative"
+        className="glass-panel-glow hud-corner rounded-t-3xl sm:rounded-3xl max-w-md w-full p-6 border border-cyan-500/35 space-y-4 bg-[#091325]/95 shadow-2xl relative max-h-[92dvh] sm:max-h-[85vh] overflow-y-auto"
       >
         <div className="flex items-center justify-between pb-2 border-b border-cyan-500/20">
           <div className="flex items-center gap-2">
@@ -438,12 +438,12 @@ export function TransactionDetailModal({
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-[#02050e]/85 backdrop-blur-md flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-50 bg-[#02050e]/85 backdrop-blur-md flex items-end sm:items-center justify-center p-0 sm:p-4">
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.95 }}
-        className="glass-panel-glow hud-corner rounded-3xl max-w-md w-full p-6 border border-cyan-500/35 space-y-4 bg-[#091325]/95 shadow-2xl relative"
+        className="glass-panel-glow hud-corner rounded-t-3xl sm:rounded-3xl max-w-md w-full p-6 border border-cyan-500/35 space-y-4 bg-[#091325]/95 shadow-2xl relative max-h-[92dvh] sm:max-h-[85vh] overflow-y-auto"
       >
         <div className="flex items-center justify-between pb-3 border-b border-cyan-500/20">
           <div className="flex items-center gap-2">

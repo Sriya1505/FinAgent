@@ -54,8 +54,8 @@ export default function UploadCsvModal({ isOpen, onClose, onSuccess }) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-[#02050e]/85 backdrop-blur-md flex items-center justify-center p-4">
-      <div className="glass-panel-glow hud-corner rounded-2xl max-w-lg w-full border border-cyan-500/30 overflow-hidden shadow-2xl relative">
+    <div className="fixed inset-0 z-50 bg-[#02050e]/85 backdrop-blur-md flex items-end sm:items-center justify-center p-0 sm:p-4">
+      <div className="glass-panel-glow hud-corner rounded-t-3xl sm:rounded-2xl max-w-lg w-full border border-cyan-500/30 overflow-hidden shadow-2xl relative max-h-[92dvh] sm:max-h-none overflow-y-auto">
         {/* Decorative Top Glow */}
         <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
 

@@ -165,7 +165,7 @@ export default function Savings() {
   const hasCompletedGoal = goals.some(g => g.progress_pct >= 100);
 
   return (
-    <div className="p-6 sm:p-8 space-y-8 max-w-7xl mx-auto">
+    <div className="p-4 sm:p-6 md:p-8 space-y-6 sm:space-y-8 max-w-7xl mx-auto overflow-x-hidden">
       
       {/* Finny Mascot Savings Companion Banner */}
       <div className="bg-[#081329]/90 border border-purple-500/30 rounded-3xl p-5 sm:p-6 shadow-[0_15px_35px_rgba(0,0,0,0.5),0_0_30px_rgba(168,85,247,0.12)] flex items-center gap-4 sm:gap-6 relative overflow-visible hud-corner">
@@ -376,11 +376,11 @@ export default function Savings() {
 
       {/* ================= MODAL: ADD GOAL ================= */}
       {showAddModal && (
-        <div className="fixed inset-0 z-50 bg-[#02050e]/85 backdrop-blur-md flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-50 bg-[#02050e]/85 backdrop-blur-md flex items-end sm:items-center justify-center p-0 sm:p-4">
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="glass-panel-glow hud-corner rounded-3xl max-w-sm w-full p-6 border border-cyan-500/35 space-y-4 shadow-2xl relative bg-[#091325]"
+            className="glass-panel-glow hud-corner rounded-t-3xl sm:rounded-3xl max-w-sm w-full p-6 border border-cyan-500/35 space-y-4 shadow-2xl relative bg-[#091325] max-h-[92dvh] sm:max-h-none overflow-y-auto"
           >
             <div className="flex items-center justify-between pb-2 border-b border-cyan-500/20">
               <h3 className="text-base font-bold text-white flex items-center gap-2">
@@ -460,11 +460,11 @@ export default function Savings() {
 
       {/* ================= MODAL: DEPOSIT ================= */}
       {depositModalGoal && (
-        <div className="fixed inset-0 z-50 bg-[#02050e]/85 backdrop-blur-md flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-50 bg-[#02050e]/85 backdrop-blur-md flex items-end sm:items-center justify-center p-0 sm:p-4">
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="glass-panel-glow hud-corner rounded-3xl max-w-sm w-full p-6 border border-emerald-500/40 space-y-4 shadow-2xl relative bg-[#091325]"
+            className="glass-panel-glow hud-corner rounded-t-3xl sm:rounded-3xl max-w-sm w-full p-6 border border-emerald-500/40 space-y-4 shadow-2xl relative bg-[#091325] max-h-[92dvh] sm:max-h-none overflow-y-auto"
           >
             <div className="flex items-center justify-between pb-2 border-b border-emerald-500/20">
               <h3 className="text-base font-bold text-white flex items-center gap-2">
@@ -521,11 +521,11 @@ export default function Savings() {
 
       {/* ================= MODAL: WITHDRAW ================= */}
       {withdrawModalGoal && (
-        <div className="fixed inset-0 z-50 bg-[#02050e]/85 backdrop-blur-md flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-50 bg-[#02050e]/85 backdrop-blur-md flex items-end sm:items-center justify-center p-0 sm:p-4">
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="glass-panel-glow hud-corner rounded-3xl max-w-sm w-full p-6 border border-rose-500/40 space-y-4 shadow-2xl relative bg-[#091325]"
+            className="glass-panel-glow hud-corner rounded-t-3xl sm:rounded-3xl max-w-sm w-full p-6 border border-rose-500/40 space-y-4 shadow-2xl relative bg-[#091325] max-h-[92dvh] sm:max-h-none overflow-y-auto"
           >
             <div className="flex items-center justify-between pb-2 border-b border-rose-500/20">
               <h3 className="text-base font-bold text-white flex items-center gap-2">
@@ -578,11 +578,11 @@ export default function Savings() {
 
       {/* ================= MODAL: EDIT GOAL ================= */}
       {editingGoal && (
-        <div className="fixed inset-0 z-50 bg-[#02050e]/85 backdrop-blur-md flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-50 bg-[#02050e]/85 backdrop-blur-md flex items-end sm:items-center justify-center p-0 sm:p-4">
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="glass-panel-glow hud-corner rounded-3xl max-w-sm w-full p-6 border border-cyan-500/40 space-y-4 shadow-2xl relative bg-[#091325]"
+            className="glass-panel-glow hud-corner rounded-t-3xl sm:rounded-3xl max-w-sm w-full p-6 border border-cyan-500/40 space-y-4 shadow-2xl relative bg-[#091325] max-h-[92dvh] sm:max-h-none overflow-y-auto"
           >
             <div className="flex items-center justify-between pb-2 border-b border-cyan-500/20">
               <h3 className="text-base font-bold text-white flex items-center gap-2">
@@ -649,11 +649,11 @@ export default function Savings() {
 
       {/* ================= MODAL: INSPECT GOAL ROADMAP ================= */}
       {inspectGoal && (
-        <div className="fixed inset-0 z-50 bg-[#02050e]/85 backdrop-blur-md flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-50 bg-[#02050e]/85 backdrop-blur-md flex items-end sm:items-center justify-center p-0 sm:p-4">
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="glass-panel-glow hud-corner rounded-3xl max-w-md w-full p-6 border border-cyan-500/40 space-y-4 shadow-2xl relative bg-[#091325]"
+            className="glass-panel-glow hud-corner rounded-t-3xl sm:rounded-3xl max-w-md w-full p-6 border border-cyan-500/40 space-y-4 shadow-2xl relative bg-[#091325] max-h-[92dvh] sm:max-h-none overflow-y-auto"
           >
             <div className="flex items-center justify-between pb-3 border-b border-cyan-500/20">
               <div>

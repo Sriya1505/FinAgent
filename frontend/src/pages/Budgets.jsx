@@ -156,7 +156,7 @@ export default function Budgets() {
   const healthScore = calculateHealthScore(budgetData, dashboardData, transactions.length);
 
   return (
-    <div className="p-6 sm:p-8 space-y-8 max-w-7xl mx-auto">
+    <div className="p-4 sm:p-6 md:p-8 space-y-6 sm:space-y-8 max-w-7xl mx-auto overflow-x-hidden">
       
       {/* ================= SECTION E: DAILY BUDGET CHECK-IN BANNER ================= */}
       <DailyCheckInBanner
@@ -326,11 +326,11 @@ export default function Budgets() {
 
       {/* ================= SET CATEGORY BUDGET MODAL ================= */}
       {showAddModal && (
-        <div className="fixed inset-0 z-50 bg-[#02050e]/85 backdrop-blur-md flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-50 bg-[#02050e]/85 backdrop-blur-md flex items-end sm:items-center justify-center p-0 sm:p-4">
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="glass-panel-glow hud-corner rounded-3xl max-w-sm w-full p-6 border border-cyan-500/35 space-y-4 shadow-2xl relative bg-[#091325]"
+            className="glass-panel-glow hud-corner rounded-t-3xl sm:rounded-3xl max-w-sm w-full p-6 border border-cyan-500/35 space-y-4 shadow-2xl relative bg-[#091325] max-h-[92dvh] sm:max-h-none overflow-y-auto"
           >
             <div className="flex items-center justify-between pb-2 border-b border-cyan-500/20">
               <div className="flex items-center gap-2">

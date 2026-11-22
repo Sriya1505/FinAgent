@@ -144,9 +144,9 @@ export default function FinnyMascot({
   return (
     <div className={`relative inline-flex flex-col items-center select-none ${className}`}>
       
-      {/* Optional Speech Bubble Placed Contextually */}
+      {/* Optional Speech Bubble Placed Contextually (Desktop only to prevent mobile overflow) */}
       {currentSpeech && (
-        <div className={`absolute pointer-events-auto z-40 ${
+        <div className={`hidden sm:block absolute pointer-events-auto z-40 ${
           speechPosition === 'top' ? 'bottom-[105%] mb-2' :
           speechPosition === 'bottom' ? 'top-[105%] mt-2' :
           speechPosition === 'right' ? 'left-[105%] top-0 ml-3' :

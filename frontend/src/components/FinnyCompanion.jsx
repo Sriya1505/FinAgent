@@ -373,12 +373,12 @@ export default function FinnyCompanion({ currentUser, refreshKey, onNavigate }) 
   return (
     <div className="print:hidden">
       {/* ================= 1. FLOATING FINNY MASCOT & SPEECH BUBBLE ================= */}
-      <div className="fixed bottom-6 right-6 z-40 flex flex-col items-end pointer-events-none">
+      <div className="fixed bottom-20 right-4 sm:bottom-6 sm:right-6 z-40 flex flex-col items-end pointer-events-none">
         
-        {/* Context-Aware Speech Bubble Popup */}
+        {/* Context-Aware Speech Bubble Popup (Desktop only - prevents mobile content overlap) */}
         {showSpeechBubble && speechBubble && !isOpen && (
           <div 
-            className="mb-3 max-w-xs sm:max-w-sm p-3.5 rounded-2xl bg-[#091325]/95 border border-purple-500/40 text-slate-100 text-xs shadow-[0_10px_35px_rgba(168,85,247,0.3)] backdrop-blur-xl pointer-events-auto relative animate-fadeIn transition-all"
+            className="hidden sm:block mb-3 max-w-xs sm:max-w-sm p-3.5 rounded-2xl bg-[#091325]/95 border border-purple-500/40 text-slate-100 text-xs shadow-[0_10px_35px_rgba(168,85,247,0.3)] backdrop-blur-xl pointer-events-auto relative animate-fadeIn transition-all"
             onMouseEnter={() => {
               if (speechTimeoutRef.current) clearTimeout(speechTimeoutRef.current);
             }}
@@ -389,8 +389,9 @@ export default function FinnyCompanion({ currentUser, refreshKey, onNavigate }) 
               </span>
               <button
                 onClick={() => setShowSpeechBubble(false)}
-                className="text-slate-400 hover:text-white p-0.5 cursor-pointer"
+                className="text-slate-400 hover:text-white p-0.5 cursor-pointer min-w-[28px] min-h-[28px] flex items-center justify-center"
                 title="Dismiss tip"
+                aria-label="Dismiss tip"
               >
                 <X className="w-3.5 h-3.5" />
               </button>
@@ -410,24 +411,24 @@ export default function FinnyCompanion({ currentUser, refreshKey, onNavigate }) 
               setShowSpeechBubble(false);
               if (!isOpen && !isMuted) playChirp('happy');
             }}
-            className="group relative cursor-pointer outline-none focus:scale-105 active:scale-95 transition-transform"
+            className="group relative cursor-pointer outline-none focus:scale-105 active:scale-95 transition-transform min-w-[48px] min-h-[48px] flex items-center justify-center"
             aria-label="Chat with Finny"
           >
             {/* Ambient Halo */}
             <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-purple-500/40 via-cyan-500/30 to-blue-500/40 blur-xl opacity-75 group-hover:opacity-100 transition-opacity"></div>
             
             {/* Mascot Base Button */}
-            <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-b from-[#1a1233] to-[#090d18] border-2 border-purple-400/50 shadow-[0_0_25px_rgba(192,132,252,0.4)] flex items-center justify-center overflow-visible hover:border-cyan-400 transition-colors">
+            <div className="relative w-14 h-14 sm:w-20 sm:h-20 rounded-full bg-gradient-to-b from-[#1a1233] to-[#090d18] border-2 border-purple-400/50 shadow-[0_0_25px_rgba(192,132,252,0.4)] flex items-center justify-center overflow-visible hover:border-cyan-400 transition-colors">
               <FinnyAvatar 
                 state={isOpen ? (isStreaming ? 'talking' : 'idle') : finnyState} 
                 size="md" 
-                className="w-14 h-14 sm:w-16 sm:h-16" 
+                className="w-12 h-12 sm:w-16 sm:h-16" 
               />
-              <span className="absolute bottom-1 right-1 w-3.5 h-3.5 rounded-full bg-emerald-400 border-2 border-[#090d18] shadow-[0_0_8px_rgba(52,211,153,0.8)]"></span>
+              <span className="absolute bottom-1 right-1 w-3 sm:w-3.5 h-3 sm:h-3.5 rounded-full bg-emerald-400 border-2 border-[#090d18] shadow-[0_0_8px_rgba(52,211,153,0.8)]"></span>
             </div>
 
             {!isOpen && (
-              <span className="absolute -top-7 right-0 px-2 py-0.5 rounded-md bg-purple-950/90 text-[10px] font-mono text-purple-200 border border-purple-500/30 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-md">
+              <span className="hidden sm:inline-block absolute -top-7 right-0 px-2 py-0.5 rounded-md bg-purple-950/90 text-[10px] font-mono text-purple-200 border border-purple-500/30 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-md">
                 Ask Finny 🐻✨
               </span>
             )}
@@ -438,10 +439,10 @@ export default function FinnyCompanion({ currentUser, refreshKey, onNavigate }) 
       {/* ================= 2. INTERACTIVE CHAT DRAWER / WINDOW ================= */}
       {isOpen && (
         <div 
-          className={`fixed bottom-24 right-4 sm:right-6 z-50 bg-[#091325]/95 backdrop-blur-2xl border border-purple-500/30 rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.8)] flex flex-col overflow-hidden transition-all duration-300 font-sans ${
+          className={`fixed inset-x-0 bottom-0 sm:inset-auto sm:bottom-24 sm:right-6 z-50 bg-[#091325]/95 backdrop-blur-2xl border-t sm:border border-purple-500/30 rounded-t-3xl sm:rounded-3xl shadow-[0_-15px_40px_rgba(0,0,0,0.8)] sm:shadow-[0_20px_60px_rgba(0,0,0,0.8)] flex flex-col overflow-hidden transition-all duration-300 font-sans ${
             isMinimized 
-              ? 'w-80 h-16' 
-              : 'w-[94vw] sm:w-[440px] h-[600px] max-h-[85vh]'
+              ? 'h-16 w-full sm:w-80' 
+              : 'w-full sm:w-[440px] h-[85dvh] sm:h-[600px] max-h-[88dvh] sm:max-h-[85vh]'
           }`}
         >
           {/* Top Bar Header */}
@@ -645,7 +646,7 @@ export default function FinnyCompanion({ currentUser, refreshKey, onNavigate }) 
                   e.preventDefault();
                   handleSendMessage();
                 }}
-                className="p-3 bg-[#081224] border-t border-purple-500/20 flex items-center gap-2"
+                className="p-3 bg-[#081224] border-t border-purple-500/20 flex items-center gap-2 pb-[max(0.75rem,env(safe-area-inset-bottom))]"
               >
                 <input
                   type="text"
@@ -653,13 +654,14 @@ export default function FinnyCompanion({ currentUser, refreshKey, onNavigate }) 
                   onChange={(e) => setInputMessage(e.target.value)}
                   placeholder={`Ask Finny coding, math, science, or your money...`}
                   disabled={isStreaming}
-                  className="flex-1 bg-[#040814] border border-slate-800 focus:border-purple-400 focus:ring-1 focus:ring-purple-400 rounded-xl px-3.5 py-2.5 text-xs text-slate-100 placeholder-slate-500 outline-none transition-all font-sans"
+                  className="flex-1 bg-[#040814] border border-slate-800 focus:border-purple-400 focus:ring-1 focus:ring-purple-400 rounded-xl px-3.5 py-2.5 text-xs text-slate-100 placeholder-slate-500 outline-none transition-all font-sans min-h-[44px]"
                 />
                 <button
                   type="submit"
                   disabled={!inputMessage.trim() || isStreaming}
-                  className="p-2.5 rounded-xl bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-400 hover:to-cyan-400 text-slate-950 font-bold transition-all shadow-[0_0_15px_rgba(168,85,247,0.3)] disabled:opacity-40 disabled:pointer-events-none cursor-pointer shrink-0"
+                  className="p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-400 hover:to-cyan-400 text-slate-950 font-bold transition-all shadow-[0_0_15px_rgba(168,85,247,0.3)] disabled:opacity-40 disabled:pointer-events-none cursor-pointer shrink-0"
                   title="Send message"
+                  aria-label="Send message"
                 >
                   <Send className="w-4 h-4 fill-slate-950" />
                 </button>

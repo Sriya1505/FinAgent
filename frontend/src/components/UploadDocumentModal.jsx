@@ -255,9 +255,9 @@ export default function UploadDocumentModal({ isOpen, onClose, onSuccess }) {
   const selectedOutflow = selectedTxs.filter(t => t.type === 'expense').reduce((acc, t) => acc + Number(t.amount || 0), 0);
 
   return (
-    <div className="fixed inset-0 z-50 bg-[#02050e]/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
+    <div className="fixed inset-0 z-50 bg-[#02050e]/85 backdrop-blur-md flex items-end sm:items-center justify-center p-0 sm:p-4 overflow-y-auto">
       {/* Modal Container */}
-      <div className={`bg-[#071329]/95 rounded-3xl w-full border border-cyan-500/35 shadow-[0_0_60px_rgba(6,182,212,0.25)] overflow-hidden relative hud-corner transition-all duration-300 ${
+      <div className={`bg-[#071329]/95 rounded-t-3xl sm:rounded-3xl w-full border border-cyan-500/35 shadow-[0_0_60px_rgba(6,182,212,0.25)] overflow-hidden relative hud-corner transition-all duration-300 max-h-[92dvh] sm:max-h-[90vh] flex flex-col ${
         stage === 'review' ? 'max-w-5xl' : 'max-w-2xl'
       }`}>
         {/* Top Glow Accent Bar */}
@@ -301,7 +301,7 @@ export default function UploadDocumentModal({ isOpen, onClose, onSuccess }) {
 
         {/* ================= STAGE 1: UPLOAD & STAGE ================= */}
         {stage === 'upload' && (
-          <div className="p-6 space-y-5">
+          <div className="p-4 sm:p-6 space-y-5 overflow-y-auto">
             {/* Drag & Drop Area */}
             <div
               onDragOver={handleDragOver}
@@ -454,7 +454,7 @@ export default function UploadDocumentModal({ isOpen, onClose, onSuccess }) {
 
         {/* ================= STAGE 3: REVIEW & TWO-STEP VERIFICATION ================= */}
         {stage === 'review' && (
-          <div className="p-6 space-y-5">
+          <div className="p-4 sm:p-6 space-y-5 overflow-y-auto">
             {/* Extraction Telemetry Summary Cards */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 font-mono">
               <div className="p-3.5 rounded-xl bg-[#040916] border border-cyan-500/20">

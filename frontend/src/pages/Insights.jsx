@@ -226,7 +226,7 @@ export default function Insights() {
   ];
 
   return (
-    <div className="p-6 sm:p-8 space-y-8 max-w-7xl mx-auto relative font-sans">
+    <div className="p-4 sm:p-6 md:p-8 space-y-6 sm:space-y-8 max-w-7xl mx-auto relative font-sans overflow-x-hidden">
       
       {/* Toast Notification */}
       <AnimatePresence>

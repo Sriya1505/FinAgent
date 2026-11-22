@@ -135,10 +135,10 @@ export default function Transactions({ onAddTx, onUploadCsv }) {
   const netImpact = totalInflow - totalOutflow;
 
   return (
-    <div className="p-6 sm:p-8 space-y-7 max-w-7xl mx-auto">
+    <div className="p-4 sm:p-6 md:p-8 space-y-5 sm:space-y-7 max-w-7xl mx-auto overflow-x-hidden">
       
       {/* ================= TELEMETRY STATS BAR ================= */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 font-mono text-xs">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-4 font-mono text-xs">
         <div 
           onClick={() => setSelectedType(selectedType === 'income' ? 'All' : 'income')}
           className={`p-4 rounded-2xl border transition-all cursor-pointer ${
@@ -214,17 +214,17 @@ export default function Transactions({ onAddTx, onUploadCsv }) {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex items-center flex-wrap gap-2.5">
+          <div className="flex items-center flex-wrap gap-2 w-full lg:w-auto">
             <button
               onClick={onUploadCsv}
-              className="flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-slate-300 bg-white/5 border border-white/10 hover:border-cyan-400/60 hover:text-white rounded-xl transition-all font-mono cursor-pointer"
+              className="flex-1 sm:flex-initial min-h-[44px] flex items-center justify-center gap-1.5 px-3.5 py-2 text-xs font-bold text-slate-300 bg-white/5 border border-white/10 hover:border-cyan-400/60 hover:text-white rounded-xl transition-all font-mono cursor-pointer"
             >
               <UploadCloud className="w-4 h-4 text-cyan-400" />
               <span>Upload Documents</span>
             </button>
             <button
               onClick={onAddTx}
-              className="flex items-center gap-1.5 px-4 py-2 text-xs font-black text-slate-950 bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 rounded-xl shadow-[0_0_20px_rgba(6,182,212,0.35)] transition-all font-mono cursor-pointer"
+              className="w-full sm:w-auto min-h-[44px] flex items-center justify-center gap-1.5 px-4 py-2 text-xs font-black text-slate-950 bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 rounded-xl shadow-[0_0_20px_rgba(6,182,212,0.35)] transition-all font-mono cursor-pointer"
             >
               <Plus className="w-4 h-4" />
               <span>Add Transaction</span>
@@ -338,63 +338,101 @@ export default function Transactions({ onAddTx, onUploadCsv }) {
         </div>
 
         {sortedTxs.length > 0 ? (
-          <div className="overflow-x-auto">
-            <table className="w-full text-left text-sm">
-              <thead className="bg-[#040814] text-slate-400 text-[11px] uppercase font-bold tracking-wider border-b border-cyan-500/15 font-mono">
-                <tr>
-                  <th className="px-6 py-3.5">Date</th>
-                  <th className="px-6 py-3.5">Description</th>
-                  <th className="px-6 py-3.5">Category</th>
-                  <th className="px-6 py-3.5">Type</th>
-                  <th className="px-6 py-3.5 text-right">Amount</th>
-                  <th className="px-6 py-3.5 text-center">Action</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-cyan-500/10">
-                {sortedTxs.map((tx) => (
-                  <tr 
-                    key={tx.transaction_id || tx.id}
-                    onClick={() => setSelectedTx(tx)}
-                    className="hover:bg-cyan-500/10 transition-colors cursor-pointer group"
-                  >
-                    <td className="px-6 py-3.5 text-xs text-slate-400 font-mono whitespace-nowrap">
-                      {tx.date}
-                    </td>
-                    <td className="px-6 py-3.5 font-medium text-slate-200 group-hover:text-cyan-300 transition-colors">
-                      {tx.description}
-                    </td>
-                    <td className="px-6 py-3.5">
-                      <span className="px-2.5 py-1 text-xs font-semibold rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/25">
-                        {tx.category}
-                      </span>
-                    </td>
-                    <td className="px-6 py-3.5">
-                      <span className={`px-2 py-0.5 text-[10px] font-bold rounded uppercase font-mono ${
+          <div>
+            {/* Mobile Stacked Cards View (< 640px) */}
+            <div className="block sm:hidden divide-y divide-cyan-500/10">
+              {sortedTxs.map((tx) => (
+                <div 
+                  key={tx.transaction_id || tx.id}
+                  onClick={() => setSelectedTx(tx)}
+                  className="p-4 hover:bg-cyan-500/10 active:bg-cyan-500/20 transition-colors cursor-pointer space-y-2"
+                >
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="font-bold text-slate-100 text-sm truncate">{tx.description}</span>
+                    <span className={`font-black font-mono text-sm shrink-0 ${
+                      tx.type === 'income' ? 'text-emerald-400' : 'text-slate-100'
+                    }`}>
+                      {tx.type === 'income' ? '+' : '-'}₹{(tx.amount || 0).toLocaleString('en-IN')}
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between text-xs text-slate-400 font-mono">
+                    <span className="px-2.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/25 text-[11px]">
+                      {tx.category}
+                    </span>
+                    <div className="flex items-center gap-2">
+                      <span className={`px-2 py-0.5 text-[10px] font-bold rounded uppercase ${
                         tx.type === 'income' 
                           ? 'bg-emerald-500/15 text-emerald-300 border border-emerald-500/30' 
                           : 'bg-rose-500/15 text-rose-300 border border-rose-500/30'
                       }`}>
                         {tx.type}
                       </span>
-                    </td>
-                    <td className={`px-6 py-3.5 text-right font-black font-mono ${
-                      tx.type === 'income' ? 'text-emerald-400 glow-text-cyan' : 'text-slate-100'
-                    }`}>
-                      {tx.type === 'income' ? '+' : '-'}₹{(tx.amount || 0).toLocaleString('en-IN')}
-                    </td>
-                    <td className="px-6 py-3.5 text-center" onClick={(e) => e.stopPropagation()}>
-                      <button
-                        onClick={() => setSelectedTx(tx)}
-                        className="px-2.5 py-1 text-[11px] font-mono rounded-lg bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 cursor-pointer"
-                        title="Edit transaction"
-                      >
-                        Inspect
-                      </button>
-                    </td>
+                      <span>{tx.date}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Desktop Full Table View (>= 640px) */}
+            <div className="hidden sm:block overflow-x-auto">
+              <table className="w-full text-left text-sm">
+                <thead className="bg-[#040814] text-slate-400 text-[11px] uppercase font-bold tracking-wider border-b border-cyan-500/15 font-mono">
+                  <tr>
+                    <th className="px-6 py-3.5">Date</th>
+                    <th className="px-6 py-3.5">Description</th>
+                    <th className="px-6 py-3.5">Category</th>
+                    <th className="px-6 py-3.5">Type</th>
+                    <th className="px-6 py-3.5 text-right">Amount</th>
+                    <th className="px-6 py-3.5 text-center">Action</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody className="divide-y divide-cyan-500/10">
+                  {sortedTxs.map((tx) => (
+                    <tr 
+                      key={tx.transaction_id || tx.id}
+                      onClick={() => setSelectedTx(tx)}
+                      className="hover:bg-cyan-500/10 transition-colors cursor-pointer group"
+                    >
+                      <td className="px-6 py-3.5 text-xs text-slate-400 font-mono whitespace-nowrap">
+                        {tx.date}
+                      </td>
+                      <td className="px-6 py-3.5 font-medium text-slate-200 group-hover:text-cyan-300 transition-colors">
+                        {tx.description}
+                      </td>
+                      <td className="px-6 py-3.5">
+                        <span className="px-2.5 py-1 text-xs font-semibold rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/25">
+                          {tx.category}
+                        </span>
+                      </td>
+                      <td className="px-6 py-3.5">
+                        <span className={`px-2 py-0.5 text-[10px] font-bold rounded uppercase font-mono ${
+                          tx.type === 'income' 
+                            ? 'bg-emerald-500/15 text-emerald-300 border border-emerald-500/30' 
+                            : 'bg-rose-500/15 text-rose-300 border border-rose-500/30'
+                        }`}>
+                          {tx.type}
+                        </span>
+                      </td>
+                      <td className={`px-6 py-3.5 text-right font-black font-mono ${
+                        tx.type === 'income' ? 'text-emerald-400 glow-text-cyan' : 'text-slate-100'
+                      }`}>
+                        {tx.type === 'income' ? '+' : '-'}₹{(tx.amount || 0).toLocaleString('en-IN')}
+                      </td>
+                      <td className="px-6 py-3.5 text-center" onClick={(e) => e.stopPropagation()}>
+                        <button
+                          onClick={() => setSelectedTx(tx)}
+                          className="px-2.5 py-1 text-[11px] font-mono rounded-lg bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 cursor-pointer min-h-[32px]"
+                          title="Edit transaction"
+                        >
+                          Inspect
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         ) : (
           <div className="p-16 text-center space-y-3 font-mono">
