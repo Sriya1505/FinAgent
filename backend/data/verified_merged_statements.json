@@ -1,0 +1,2242 @@
+[
+  {
+    "date": "2026-11-01",
+    "merchant": "Bank Inward Transfer / Salary Credit",
+    "description": "November Verified UPI Inflow & Salary Deposit",
+    "amount": 10103.0,
+    "type": "income",
+    "source_page": 0
+  },
+  {
+    "date": "2026-11-16",
+    "merchant": "THE FIT HUB",
+    "description": "UPI Payment to THE FIT HUB",
+    "amount": 3000.0,
+    "type": "expense",
+    "source_page": 1
+  },
+  {
+    "date": "2026-11-08",
+    "merchant": "MissARJAYASASWINI",
+    "description": "UPI Payment to MissARJAYASASWINI",
+    "amount": 2000.0,
+    "type": "expense",
+    "source_page": 1
+  },
+  {
+    "date": "2026-11-02",
+    "merchant": "MALIREDDYSATYARANI",
+    "description": "UPI Payment to MALIREDDYSATYARANI",
+    "amount": 1811.0,
+    "type": "expense",
+    "source_page": 1
+  },
+  {
+    "date": "2026-11-20",
+    "merchant": "Blinkit",
+    "description": "UPI Payment to Blinkit",
+    "amount": 353.0,
+    "type": "expense",
+    "source_page": 1
+  },
+  {
+    "date": "2026-11-07",
+    "merchant": "M S SRI SAMPATH VINAYA.",
+    "description": "UPI Payment to M S SRI SAMPATH VINAYA.",
+    "amount": 347.0,
+    "type": "expense",
+    "source_page": 1
+  },
+  {
+    "date": "2026-11-15",
+    "merchant": "VEEMART",
+    "description": "UPI Payment to VEEMART",
+    "amount": 279.0,
+    "type": "expense",
+    "source_page": 1
+  },
+  {
+    "date": "2026-11-01",
+    "merchant": "SWIGGY",
+    "description": "UPI Payment to SWIGGY",
+    "amount": 278.0,
+    "type": "expense",
+    "source_page": 2
+  },
+  {
+    "date": "2026-11-08",
+    "merchant": "SWIGGY INSTAMART",
+    "description": "UPI Payment to SWIGGY INSTAMART",
+    "amount": 211.0,
+    "type": "expense",
+    "source_page": 2
+  },
+  {
+    "date": "2026-11-13",
+    "merchant": "Builduforward",
+    "description": "UPI Payment to Builduforward",
+    "amount": 199.2,
+    "type": "expense",
+    "source_page": 2
+  },
+  {
+    "date": "2026-11-10",
+    "merchant": "Zomato",
+    "description": "UPI Payment to Zomato",
+    "amount": 180.59,
+    "type": "expense",
+    "source_page": 2
+  },
+  {
+    "date": "2026-11-06",
+    "merchant": "Zomato",
+    "description": "UPI Payment to Zomato",
+    "amount": 179.69,
+    "type": "expense",
+    "source_page": 2
+  },
+  {
+    "date": "2026-11-13",
+    "merchant": "ZOMATO LTD",
+    "description": "UPI Payment to ZOMATO LTD",
+    "amount": 178.68,
+    "type": "expense",
+    "source_page": 2
+  },
+  {
+    "date": "2026-11-02",
+    "merchant": "Zomato Media Private Li.",
+    "description": "UPI Payment to Zomato Media Private Li.",
+    "amount": 171.89,
+    "type": "expense",
+    "source_page": 3
+  },
+  {
+    "date": "2026-11-05",
+    "merchant": "MAHAPATRO ANJAN KUMAR",
+    "description": "UPI Payment to MAHAPATRO ANJAN KUMAR",
+    "amount": 170.0,
+    "type": "expense",
+    "source_page": 3
+  },
+  {
+    "date": "2026-11-07",
+    "merchant": "MITHUN KUMAR CHAUDH..",
+    "description": "UPI Payment to MITHUN KUMAR CHAUDH..",
+    "amount": 120.0,
+    "type": "expense",
+    "source_page": 3
+  },
+  {
+    "date": "2026-11-09",
+    "merchant": "Swiggy",
+    "description": "UPI Payment to Swiggy",
+    "amount": 114.0,
+    "type": "expense",
+    "source_page": 3
+  },
+  {
+    "date": "2026-11-18",
+    "merchant": "VEE MART",
+    "description": "UPI Payment to VEE MART",
+    "amount": 109.0,
+    "type": "expense",
+    "source_page": 3
+  },
+  {
+    "date": "2026-11-16",
+    "merchant": "ANDHRABHAVAN",
+    "description": "UPI Payment to ANDHRABHAVAN",
+    "amount": 100.0,
+    "type": "expense",
+    "source_page": 3
+  },
+  {
+    "date": "2026-11-09",
+    "merchant": "KORIBILLI SUNIL",
+    "description": "UPI Payment to KORIBILLI SUNIL",
+    "amount": 100.0,
+    "type": "expense",
+    "source_page": 4
+  },
+  {
+    "date": "2026-11-01",
+    "merchant": "Polamamba soda",
+    "description": "UPI Payment to Polamamba soda",
+    "amount": 90.0,
+    "type": "expense",
+    "source_page": 4
+  },
+  {
+    "date": "2026-11-12",
+    "merchant": "DRFOODS3",
+    "description": "UPI Payment to DRFOODS3",
+    "amount": 80.0,
+    "type": "expense",
+    "source_page": 4
+  },
+  {
+    "date": "2026-11-06",
+    "merchant": "SAI PRIYA ESTATES AND RE..",
+    "description": "UPI Payment to SAI PRIYA ESTATES AND RE..",
+    "amount": 780.0,
+    "type": "expense",
+    "source_page": 4
+  },
+  {
+    "date": "2026-11-08",
+    "merchant": "POTLURI MADAVI",
+    "description": "UPI Payment to POTLURI MADAVI",
+    "amount": 70.0,
+    "type": "expense",
+    "source_page": 4
+  },
+  {
+    "date": "2026-11-19",
+    "merchant": "BAYBEE CHIKIZZA",
+    "description": "UPI Payment to BAYBEE CHIKIZZA",
+    "amount": 69.0,
+    "type": "expense",
+    "source_page": 4
+  },
+  {
+    "date": "2026-11-19",
+    "merchant": "Bezawada Home foods",
+    "description": "UPI Payment to Bezawada Home foods",
+    "amount": 60.0,
+    "type": "expense",
+    "source_page": 5
+  },
+  {
+    "date": "2026-11-19",
+    "merchant": "ANDHRABHAVAN",
+    "description": "UPI Payment to ANDHRABHAVAN",
+    "amount": 50.0,
+    "type": "expense",
+    "source_page": 5
+  },
+  {
+    "date": "2026-11-17",
+    "merchant": "BABA BAZAR",
+    "description": "UPI Payment to BABA BAZAR",
+    "amount": 40.0,
+    "type": "expense",
+    "source_page": 5
+  },
+  {
+    "date": "2026-11-10",
+    "merchant": "MUSTAFA EZZI",
+    "description": "UPI Payment to MUSTAFA EZZI",
+    "amount": 40.0,
+    "type": "expense",
+    "source_page": 5
+  },
+  {
+    "date": "2026-11-19",
+    "merchant": "SRI MODARAMMA THALLI T.",
+    "description": "UPI Payment to SRI MODARAMMA THALLI T.",
+    "amount": 30.0,
+    "type": "expense",
+    "source_page": 5
+  },
+  {
+    "date": "2026-11-07",
+    "merchant": "Durga muri mixer",
+    "description": "UPI Payment to Durga muri mixer",
+    "amount": 30.0,
+    "type": "expense",
+    "source_page": 5
+  },
+  {
+    "date": "2026-11-04",
+    "merchant": "MALIREDDYSATYARANI",
+    "description": "UPI Payment to MALIREDDYSATYARANI",
+    "amount": 20.0,
+    "type": "expense",
+    "source_page": 6
+  },
+  {
+    "date": "2026-11-19",
+    "merchant": "APPLEMEDIASERVICES",
+    "description": "UPI Payment to APPLEMEDIASERVICES",
+    "amount": 15.0,
+    "type": "expense",
+    "source_page": 6
+  },
+  {
+    "date": "2026-11-17",
+    "merchant": "Baba Bazar",
+    "description": "UPI Payment to Baba Bazar",
+    "amount": 15.0,
+    "type": "expense",
+    "source_page": 6
+  },
+  {
+    "date": "2026-11-03",
+    "merchant": "PRSADSTATIONERY",
+    "description": "UPI Payment to PRSADSTATIONERY",
+    "amount": 12.0,
+    "type": "expense",
+    "source_page": 6
+  },
+  {
+    "date": "2026-11-20",
+    "merchant": "SAMATHA KIRANA",
+    "description": "UPI Payment to SAMATHA KIRANA",
+    "amount": 10.0,
+    "type": "expense",
+    "source_page": 6
+  },
+  {
+    "date": "2026-10-01",
+    "merchant": "Bank Inward Transfer / Salary Credit",
+    "description": "October Verified UPI Inflow & Salary Deposit",
+    "amount": 18548.0,
+    "type": "income",
+    "source_page": 7
+  },
+  {
+    "date": "2026-10-15",
+    "merchant": "SAI PRIYA ESTATES AND..",
+    "description": "UPI Payment to SAI PRIYA ESTATES AND..",
+    "amount": 3303.0,
+    "type": "expense",
+    "source_page": 8
+  },
+  {
+    "date": "2026-10-16",
+    "merchant": "THE FIT HUB",
+    "description": "UPI Payment to THE FIT HUB",
+    "amount": 3000.0,
+    "type": "expense",
+    "source_page": 8
+  },
+  {
+    "date": "2026-10-10",
+    "merchant": "KORIBILLISUNIL",
+    "description": "UPI Payment to KORIBILLISUNIL",
+    "amount": 2000.0,
+    "type": "expense",
+    "source_page": 8
+  },
+  {
+    "date": "2026-10-01",
+    "merchant": "SAVANA",
+    "description": "UPI Payment to SAVANA",
+    "amount": 1002.0,
+    "type": "expense",
+    "source_page": 8
+  },
+  {
+    "date": "2026-10-06",
+    "merchant": "Littleboxindia",
+    "description": "UPI Payment to Littleboxindia",
+    "amount": 749.0,
+    "type": "expense",
+    "source_page": 8
+  },
+  {
+    "date": "2026-10-05",
+    "merchant": "District Movies",
+    "description": "UPI Payment to District Movies",
+    "amount": 506.22,
+    "type": "expense",
+    "source_page": 9
+  },
+  {
+    "date": "2026-10-14",
+    "merchant": "GURRALAANNAPOORNA",
+    "description": "UPI Payment to GURRALAANNAPOORNA",
+    "amount": 7400.0,
+    "type": "expense",
+    "source_page": 9
+  },
+  {
+    "date": "2026-10-14",
+    "merchant": "D R Raju Agencies",
+    "description": "UPI Payment to D R Raju Agencies",
+    "amount": 396.99,
+    "type": "expense",
+    "source_page": 9
+  },
+  {
+    "date": "2026-10-07",
+    "merchant": "Chaina town",
+    "description": "UPI Payment to Chaina town",
+    "amount": 390.0,
+    "type": "expense",
+    "source_page": 9
+  },
+  {
+    "date": "2026-10-04",
+    "merchant": "SWIGGY",
+    "description": "UPI Payment to SWIGGY",
+    "amount": 321.0,
+    "type": "expense",
+    "source_page": 9
+  },
+  {
+    "date": "2026-10-06",
+    "merchant": "KORIBILLISUNIL",
+    "description": "UPI Payment to KORIBILLISUNIL",
+    "amount": 320.0,
+    "type": "expense",
+    "source_page": 10
+  },
+  {
+    "date": "2026-10-30",
+    "merchant": "COCOKAILASHAGIRISP",
+    "description": "UPI Payment to COCOKAILASHAGIRISP",
+    "amount": 300.0,
+    "type": "expense",
+    "source_page": 10
+  },
+  {
+    "date": "2026-10-08",
+    "merchant": "MALIREDDY SATYA RANI",
+    "description": "UPI Payment to MALIREDDY SATYA RANI",
+    "amount": 300.0,
+    "type": "expense",
+    "source_page": 10
+  },
+  {
+    "date": "2026-10-25",
+    "merchant": "SWIGGY",
+    "description": "UPI Payment to SWIGGY",
+    "amount": 292.0,
+    "type": "expense",
+    "source_page": 10
+  },
+  {
+    "date": "2026-10-12",
+    "merchant": "BLINKIT",
+    "description": "UPI Payment to BLINKIT",
+    "amount": 252.0,
+    "type": "expense",
+    "source_page": 10
+  },
+  {
+    "date": "2026-10-09",
+    "merchant": "SAVANA",
+    "description": "UPI Payment to SAVANA",
+    "amount": 251.0,
+    "type": "expense",
+    "source_page": 10
+  },
+  {
+    "date": "2026-10-08",
+    "merchant": "CreamStoneYendada",
+    "description": "UPI Payment to CreamStoneYendada",
+    "amount": 247.0,
+    "type": "expense",
+    "source_page": 11
+  },
+  {
+    "date": "2026-10-22",
+    "merchant": "ANDHRABHAVAN",
+    "description": "UPI Payment to ANDHRABHAVAN",
+    "amount": 240.0,
+    "type": "expense",
+    "source_page": 11
+  },
+  {
+    "date": "2026-10-20",
+    "merchant": "ANDHRABHAVAN",
+    "description": "UPI Payment to ANDHRABHAVAN",
+    "amount": 180.0,
+    "type": "expense",
+    "source_page": 11
+  },
+  {
+    "date": "2026-10-10",
+    "merchant": "APPURUBOTHU PAVAN KU..",
+    "description": "UPI Payment to APPURUBOTHU PAVAN KU..",
+    "amount": 180.0,
+    "type": "expense",
+    "source_page": 11
+  },
+  {
+    "date": "2026-10-16",
+    "merchant": "APOLLOPHARMACY",
+    "description": "UPI Payment to APOLLOPHARMACY",
+    "amount": 176.8,
+    "type": "expense",
+    "source_page": 11
+  },
+  {
+    "date": "2026-10-12",
+    "merchant": "MALIREDDYSATYARANI",
+    "description": "UPI Payment to MALIREDDYSATYARANI",
+    "amount": 171.0,
+    "type": "expense",
+    "source_page": 11
+  },
+  {
+    "date": "2026-10-04",
+    "merchant": "SWIGGY",
+    "description": "UPI Payment to SWIGGY",
+    "amount": 169.0,
+    "type": "expense",
+    "source_page": 12
+  },
+  {
+    "date": "2026-10-02",
+    "merchant": "Swiggy Ltd",
+    "description": "UPI Payment to Swiggy Ltd",
+    "amount": 169.0,
+    "type": "expense",
+    "source_page": 12
+  },
+  {
+    "date": "2026-10-17",
+    "merchant": "Blinkit",
+    "description": "UPI Payment to Blinkit",
+    "amount": 166.0,
+    "type": "expense",
+    "source_page": 12
+  },
+  {
+    "date": "2026-10-22",
+    "merchant": "BLINKIT",
+    "description": "UPI Payment to BLINKIT",
+    "amount": 163.0,
+    "type": "expense",
+    "source_page": 12
+  },
+  {
+    "date": "2026-10-16",
+    "merchant": "Blinkit",
+    "description": "UPI Payment to Blinkit",
+    "amount": 160.0,
+    "type": "expense",
+    "source_page": 12
+  },
+  {
+    "date": "2026-10-06",
+    "merchant": "ANDHRABHAVAN",
+    "description": "UPI Payment to ANDHRABHAVAN",
+    "amount": 160.0,
+    "type": "expense",
+    "source_page": 13
+  },
+  {
+    "date": "2026-10-15",
+    "merchant": "BLINKITCOMMERCEPRIVA..",
+    "description": "UPI Payment to BLINKITCOMMERCEPRIVA..",
+    "amount": 159.0,
+    "type": "expense",
+    "source_page": 13
+  },
+  {
+    "date": "2026-10-04",
+    "merchant": "Blinkit",
+    "description": "UPI Payment to Blinkit",
+    "amount": 138.0,
+    "type": "expense",
+    "source_page": 13
+  },
+  {
+    "date": "2026-10-24",
+    "merchant": "SREEFOODZ",
+    "description": "UPI Payment to SREEFOODZ",
+    "amount": 125.0,
+    "type": "expense",
+    "source_page": 13
+  },
+  {
+    "date": "2026-10-17",
+    "merchant": "SREEFOODZ",
+    "description": "UPI Payment to SREEFOODZ",
+    "amount": 120.0,
+    "type": "expense",
+    "source_page": 13
+  },
+  {
+    "date": "2026-10-16",
+    "merchant": "SAI PRIYA ESTATES AND R...",
+    "description": "UPI Payment to SAI PRIYA ESTATES AND R...",
+    "amount": 120.0,
+    "type": "expense",
+    "source_page": 14
+  },
+  {
+    "date": "2026-10-09",
+    "merchant": "SVDKONASEEMATIFFINS",
+    "description": "UPI Payment to SVDKONASEEMATIFFINS",
+    "amount": 105.0,
+    "type": "expense",
+    "source_page": 14
+  },
+  {
+    "date": "2026-10-08",
+    "merchant": "BABABAZAR",
+    "description": "UPI Payment to BABABAZAR",
+    "amount": 105.0,
+    "type": "expense",
+    "source_page": 14
+  },
+  {
+    "date": "2026-10-17",
+    "merchant": "BR MOMO",
+    "description": "UPI Payment to BR MOMO",
+    "amount": 100.0,
+    "type": "expense",
+    "source_page": 14
+  },
+  {
+    "date": "2026-10-16",
+    "merchant": "GROWWINVEST TECHPV.",
+    "description": "UPI Payment to GROWWINVEST TECHPV.",
+    "amount": 100.0,
+    "type": "expense",
+    "source_page": 14
+  },
+  {
+    "date": "2026-10-14",
+    "merchant": "Bezawada Home foods",
+    "description": "UPI Payment to Bezawada Home foods",
+    "amount": 100.0,
+    "type": "expense",
+    "source_page": 14
+  },
+  {
+    "date": "2026-10-01",
+    "merchant": "ANDHRABHAVAN",
+    "description": "UPI Payment to ANDHRABHAVAN",
+    "amount": 100.0,
+    "type": "expense",
+    "source_page": 15
+  },
+  {
+    "date": "2026-10-14",
+    "merchant": "Pop n pops",
+    "description": "UPI Payment to Pop n pops",
+    "amount": 85.0,
+    "type": "expense",
+    "source_page": 15
+  },
+  {
+    "date": "2026-10-18",
+    "merchant": "KESUBOINAVIDYASAGAR",
+    "description": "UPI Payment to KESUBOINAVIDYASAGAR",
+    "amount": 75.0,
+    "type": "expense",
+    "source_page": 15
+  },
+  {
+    "date": "2026-10-30",
+    "merchant": "SREERAMAMURTHYMUG.",
+    "description": "UPI Payment to SREERAMAMURTHYMUG.",
+    "amount": 70.0,
+    "type": "expense",
+    "source_page": 15
+  },
+  {
+    "date": "2026-10-12",
+    "merchant": "SREE FOODZ",
+    "description": "UPI Payment to SREE FOODZ",
+    "amount": 70.0,
+    "type": "expense",
+    "source_page": 16
+  },
+  {
+    "date": "2026-10-01",
+    "merchant": "MALIREDDYSATYARANI",
+    "description": "UPI Payment to MALIREDDYSATYARANI",
+    "amount": 70.0,
+    "type": "expense",
+    "source_page": 16
+  },
+  {
+    "date": "2026-10-31",
+    "merchant": "PRSADSTATIONERY",
+    "description": "UPI Payment to PRSADSTATIONERY",
+    "amount": 60.0,
+    "type": "expense",
+    "source_page": 16
+  },
+  {
+    "date": "2026-10-09",
+    "merchant": "Bonthu Gopal",
+    "description": "UPI Payment to Bonthu Gopal",
+    "amount": 60.0,
+    "type": "expense",
+    "source_page": 16
+  },
+  {
+    "date": "2026-10-10",
+    "merchant": "KARAKAVALASA SIVADEEP",
+    "description": "UPI Payment to KARAKAVALASA SIVADEEP",
+    "amount": 51.0,
+    "type": "expense",
+    "source_page": 17
+  },
+  {
+    "date": "2026-10-17",
+    "merchant": "KORIBILLISUNIL",
+    "description": "UPI Payment to KORIBILLISUNIL",
+    "amount": 50.0,
+    "type": "expense",
+    "source_page": 17
+  },
+  {
+    "date": "2026-10-15",
+    "merchant": "RAMAPADA MOHANTY",
+    "description": "UPI Payment to RAMAPADA MOHANTY",
+    "amount": 50.0,
+    "type": "expense",
+    "source_page": 17
+  },
+  {
+    "date": "2026-10-14",
+    "merchant": "MALIREDDY SATYARANI",
+    "description": "UPI Payment to MALIREDDY SATYARANI",
+    "amount": 50.0,
+    "type": "expense",
+    "source_page": 17
+  },
+  {
+    "date": "2026-10-30",
+    "merchant": "KAVALRY TECHNOLOGIES P..",
+    "description": "UPI Payment to KAVALRY TECHNOLOGIES P..",
+    "amount": 49.0,
+    "type": "expense",
+    "source_page": 17
+  },
+  {
+    "date": "2026-10-14",
+    "merchant": "Bezawada Home foods",
+    "description": "UPI Payment to Bezawada Home foods",
+    "amount": 45.0,
+    "type": "expense",
+    "source_page": 17
+  },
+  {
+    "date": "2026-10-07",
+    "merchant": "Vendolite 4",
+    "description": "UPI Payment to Vendolite 4",
+    "amount": 30.0,
+    "type": "expense",
+    "source_page": 18
+  },
+  {
+    "date": "2026-10-31",
+    "merchant": "BOTCHA",
+    "description": "UPI Payment to BOTCHA",
+    "amount": 23.0,
+    "type": "expense",
+    "source_page": 18
+  },
+  {
+    "date": "2026-10-21",
+    "merchant": "YENDADA",
+    "description": "UPI Payment to YENDADA",
+    "amount": 20.0,
+    "type": "expense",
+    "source_page": 18
+  },
+  {
+    "date": "2026-10-20",
+    "merchant": "APPLEMEDIASERVICES",
+    "description": "UPI Payment to APPLEMEDIASERVICES",
+    "amount": 15.0,
+    "type": "expense",
+    "source_page": 18
+  },
+  {
+    "date": "2026-10-23",
+    "merchant": "MrRAJESHKUMARUP",
+    "description": "UPI Payment to MrRAJESHKUMARUP",
+    "amount": 12.0,
+    "type": "expense",
+    "source_page": 18
+  },
+  {
+    "date": "2026-10-09",
+    "merchant": "SVDKONASEEMATIFFINS",
+    "description": "UPI Payment to SVDKONASEEMATIFFINS",
+    "amount": 10.0,
+    "type": "expense",
+    "source_page": 18
+  },
+  {
+    "date": "2026-09-01",
+    "merchant": "Bank Inward Transfer / Salary Credit",
+    "description": "September Verified UPI Inflow & Salary Deposit",
+    "amount": 23158.0,
+    "type": "income",
+    "source_page": 20
+  },
+  {
+    "date": "2026-09-16",
+    "merchant": "THE FIT HUB",
+    "description": "UPI Payment to THE FIT HUB",
+    "amount": 3000.0,
+    "type": "expense",
+    "source_page": 21
+  },
+  {
+    "date": "2026-09-06",
+    "merchant": "NIKE INDIA",
+    "description": "UPI Payment to NIKE INDIA",
+    "amount": 1317.0,
+    "type": "expense",
+    "source_page": 21
+  },
+  {
+    "date": "2026-09-01",
+    "merchant": "Bonkerscorner",
+    "description": "UPI Payment to Bonkerscorner",
+    "amount": 1075.15,
+    "type": "expense",
+    "source_page": 21
+  },
+  {
+    "date": "2026-09-12",
+    "merchant": "VEE MART",
+    "description": "UPI Payment to VEE MART",
+    "amount": 1009.0,
+    "type": "expense",
+    "source_page": 21
+  },
+  {
+    "date": "2026-09-28",
+    "merchant": "GURRALA ANNAPOORNA",
+    "description": "UPI Payment to GURRALA ANNAPOORNA",
+    "amount": 1000.0,
+    "type": "expense",
+    "source_page": 21
+  },
+  {
+    "date": "2026-09-15",
+    "merchant": "Indian Institute of Techno...",
+    "description": "UPI Payment to Indian Institute of Techno...",
+    "amount": 1000.0,
+    "type": "expense",
+    "source_page": 21
+  },
+  {
+    "date": "2026-09-27",
+    "merchant": "Indian Institute of Techno...",
+    "description": "UPI Payment to Indian Institute of Techno...",
+    "amount": 1000.0,
+    "type": "expense",
+    "source_page": 22
+  },
+  {
+    "date": "2026-09-03",
+    "merchant": "VIJETHA SUPERMARKETS.",
+    "description": "UPI Payment to VIJETHA SUPERMARKETS.",
+    "amount": 921.0,
+    "type": "expense",
+    "source_page": 22
+  },
+  {
+    "date": "2026-09-23",
+    "merchant": "GITAM",
+    "description": "UPI Payment to GITAM",
+    "amount": 800.47,
+    "type": "expense",
+    "source_page": 22
+  },
+  {
+    "date": "2026-09-09",
+    "merchant": "M S SRI SAMPATH VINAYA",
+    "description": "UPI Payment to M S SRI SAMPATH VINAYA",
+    "amount": 755.0,
+    "type": "expense",
+    "source_page": 22
+  },
+  {
+    "date": "2026-09-19",
+    "merchant": "Nykaa Luxe Mall Vishakha...",
+    "description": "UPI Payment to Nykaa Luxe Mall Vishakha...",
+    "amount": 675.0,
+    "type": "expense",
+    "source_page": 22
+  },
+  {
+    "date": "2026-09-01",
+    "merchant": "Bonkerscorner",
+    "description": "UPI Payment to Bonkerscorner",
+    "amount": 647.65,
+    "type": "expense",
+    "source_page": 22
+  },
+  {
+    "date": "2026-09-19",
+    "merchant": "SWIGGY INSTAMART",
+    "description": "UPI Payment to SWIGGY INSTAMART",
+    "amount": 585.0,
+    "type": "expense",
+    "source_page": 23
+  },
+  {
+    "date": "2026-09-09",
+    "merchant": "Poda Raja Rajeswari",
+    "description": "UPI Payment to Poda Raja Rajeswari",
+    "amount": 560.0,
+    "type": "expense",
+    "source_page": 23
+  },
+  {
+    "date": "2026-09-07",
+    "merchant": "FRESHCHOICEYENDADA",
+    "description": "UPI Payment to FRESHCHOICEYENDADA",
+    "amount": 557.0,
+    "type": "expense",
+    "source_page": 23
+  },
+  {
+    "date": "2026-09-16",
+    "merchant": "SRI Kari group",
+    "description": "UPI Payment to SRI Kari group",
+    "amount": 550.0,
+    "type": "expense",
+    "source_page": 23
+  },
+  {
+    "date": "2026-09-15",
+    "merchant": "Swiggy Ltd",
+    "description": "UPI Payment to Swiggy Ltd",
+    "amount": 417.0,
+    "type": "expense",
+    "source_page": 23
+  },
+  {
+    "date": "2026-09-07",
+    "merchant": "SWIGGY",
+    "description": "UPI Payment to SWIGGY",
+    "amount": 400.0,
+    "type": "expense",
+    "source_page": 23
+  },
+  {
+    "date": "2026-09-16",
+    "merchant": "Pop n pops",
+    "description": "UPI Payment to Pop n pops",
+    "amount": 365.0,
+    "type": "expense",
+    "source_page": 24
+  },
+  {
+    "date": "2026-09-18",
+    "merchant": "HARDCASTLERESTAU..",
+    "description": "UPI Payment to HARDCASTLERESTAU..",
+    "amount": 300.3,
+    "type": "expense",
+    "source_page": 24
+  },
+  {
+    "date": "2026-09-28",
+    "merchant": "D R Raju Agencies",
+    "description": "UPI Payment to D R Raju Agencies",
+    "amount": 300.0,
+    "type": "expense",
+    "source_page": 24
+  },
+  {
+    "date": "2026-09-05",
+    "merchant": "YENDADA",
+    "description": "UPI Payment to YENDADA",
+    "amount": 298.0,
+    "type": "expense",
+    "source_page": 24
+  },
+  {
+    "date": "2026-09-11",
+    "merchant": "SWIGGY",
+    "description": "UPI Payment to SWIGGY",
+    "amount": 286.0,
+    "type": "expense",
+    "source_page": 24
+  },
+  {
+    "date": "2026-09-04",
+    "merchant": "SWIGGY",
+    "description": "UPI Payment to SWIGGY",
+    "amount": 286.0,
+    "type": "expense",
+    "source_page": 24
+  },
+  {
+    "date": "2026-09-25",
+    "merchant": "PINNINTI SURYANARAYANA",
+    "description": "UPI Payment to PINNINTI SURYANARAYANA",
+    "amount": 270.0,
+    "type": "expense",
+    "source_page": 25
+  },
+  {
+    "date": "2026-09-07",
+    "merchant": "Swiggy Ltd",
+    "description": "UPI Payment to Swiggy Ltd",
+    "amount": 259.0,
+    "type": "expense",
+    "source_page": 25
+  },
+  {
+    "date": "2026-09-15",
+    "merchant": "SWIGGY INSTAMART",
+    "description": "UPI Payment to SWIGGY INSTAMART",
+    "amount": 248.0,
+    "type": "expense",
+    "source_page": 25
+  },
+  {
+    "date": "2026-09-17",
+    "merchant": "SWIGGY",
+    "description": "UPI Payment to SWIGGY",
+    "amount": 229.0,
+    "type": "expense",
+    "source_page": 25
+  },
+  {
+    "date": "2026-09-22",
+    "merchant": "MAHAPATRO ANJANKUM..",
+    "description": "UPI Payment to MAHAPATRO ANJANKUM..",
+    "amount": 220.0,
+    "type": "expense",
+    "source_page": 25
+  },
+  {
+    "date": "2026-09-12",
+    "merchant": "VEE MART",
+    "description": "UPI Payment to VEE MART",
+    "amount": 206.0,
+    "type": "expense",
+    "source_page": 25
+  },
+  {
+    "date": "2026-09-09",
+    "merchant": "SRIRAVINDRAENTERPRISE",
+    "description": "UPI Payment to SRIRAVINDRAENTERPRISE",
+    "amount": 205.0,
+    "type": "expense",
+    "source_page": 26
+  },
+  {
+    "date": "2026-09-08",
+    "merchant": "Blinkit",
+    "description": "UPI Payment to Blinkit",
+    "amount": 204.0,
+    "type": "expense",
+    "source_page": 26
+  },
+  {
+    "date": "2026-09-18",
+    "merchant": "Swiggy",
+    "description": "UPI Payment to Swiggy",
+    "amount": 202.0,
+    "type": "expense",
+    "source_page": 26
+  },
+  {
+    "date": "2026-09-09",
+    "merchant": "GURRALA VISHNU RAM S..",
+    "description": "UPI Payment to GURRALA VISHNU RAM S..",
+    "amount": 200.0,
+    "type": "expense",
+    "source_page": 26
+  },
+  {
+    "date": "2026-09-10",
+    "merchant": "Swiggy",
+    "description": "UPI Payment to Swiggy",
+    "amount": 193.0,
+    "type": "expense",
+    "source_page": 26
+  },
+  {
+    "date": "2026-09-12",
+    "merchant": "Zomato",
+    "description": "UPI Payment to Zomato",
+    "amount": 192.69,
+    "type": "expense",
+    "source_page": 26
+  },
+  {
+    "date": "2026-09-05",
+    "merchant": "SREEFOODZ",
+    "description": "UPI Payment to SREEFOODZ",
+    "amount": 185.0,
+    "type": "expense",
+    "source_page": 27
+  },
+  {
+    "date": "2026-09-13",
+    "merchant": "Swiggy Ltd",
+    "description": "UPI Payment to Swiggy Ltd",
+    "amount": 146.0,
+    "type": "expense",
+    "source_page": 27
+  },
+  {
+    "date": "2026-09-27",
+    "merchant": "Swiggy Ltd",
+    "description": "UPI Payment to Swiggy Ltd",
+    "amount": 145.0,
+    "type": "expense",
+    "source_page": 27
+  },
+  {
+    "date": "2026-09-14",
+    "merchant": "Swiggy Ltd",
+    "description": "UPI Payment to Swiggy Ltd",
+    "amount": 145.0,
+    "type": "expense",
+    "source_page": 27
+  },
+  {
+    "date": "2026-09-20",
+    "merchant": "Swiggy Ltd",
+    "description": "UPI Payment to Swiggy Ltd",
+    "amount": 143.0,
+    "type": "expense",
+    "source_page": 27
+  },
+  {
+    "date": "2026-09-28",
+    "merchant": "Maddi Deepak",
+    "description": "UPI Payment to Maddi Deepak",
+    "amount": 140.0,
+    "type": "expense",
+    "source_page": 28
+  },
+  {
+    "date": "2026-09-10",
+    "merchant": "SREEFOODZ",
+    "description": "UPI Payment to SREEFOODZ",
+    "amount": 140.0,
+    "type": "expense",
+    "source_page": 28
+  },
+  {
+    "date": "2026-09-21",
+    "merchant": "Swiggy Ltd",
+    "description": "UPI Payment to Swiggy Ltd",
+    "amount": 139.0,
+    "type": "expense",
+    "source_page": 28
+  },
+  {
+    "date": "2026-09-16",
+    "merchant": "CreamStoneYendada",
+    "description": "UPI Payment to CreamStoneYendada",
+    "amount": 126.0,
+    "type": "expense",
+    "source_page": 28
+  },
+  {
+    "date": "2026-09-11",
+    "merchant": "CreamStoneYendada",
+    "description": "UPI Payment to CreamStoneYendada",
+    "amount": 126.0,
+    "type": "expense",
+    "source_page": 29
+  },
+  {
+    "date": "2026-09-16",
+    "merchant": "APPLASWAMICOCONUT.",
+    "description": "UPI Payment to APPLASWAMICOCONUT.",
+    "amount": 120.0,
+    "type": "expense",
+    "source_page": 29
+  },
+  {
+    "date": "2026-09-22",
+    "merchant": "SREEFOODZ",
+    "description": "UPI Payment to SREEFOODZ",
+    "amount": 115.0,
+    "type": "expense",
+    "source_page": 29
+  },
+  {
+    "date": "2026-09-18",
+    "merchant": "SAI PRIYA ESTATES ANDRE..",
+    "description": "UPI Payment to SAI PRIYA ESTATES ANDRE..",
+    "amount": 110.0,
+    "type": "expense",
+    "source_page": 29
+  },
+  {
+    "date": "2026-09-19",
+    "merchant": "Miniso-lnorbit Vizag",
+    "description": "UPI Payment to Miniso-lnorbit Vizag",
+    "amount": 100.0,
+    "type": "expense",
+    "source_page": 29
+  },
+  {
+    "date": "2026-09-12",
+    "merchant": "THAMMIREDDISIVA",
+    "description": "UPI Payment to THAMMIREDDISIVA",
+    "amount": 100.0,
+    "type": "expense",
+    "source_page": 29
+  },
+  {
+    "date": "2026-09-10",
+    "merchant": "MUSTAFA EZZI",
+    "description": "UPI Payment to MUSTAFA EZZI",
+    "amount": 100.0,
+    "type": "expense",
+    "source_page": 30
+  },
+  {
+    "date": "2026-09-06",
+    "merchant": "POTLURIMADAVI",
+    "description": "UPI Payment to POTLURIMADAVI",
+    "amount": 100.0,
+    "type": "expense",
+    "source_page": 30
+  },
+  {
+    "date": "2026-09-02",
+    "merchant": "DIVE CAFE",
+    "description": "UPI Payment to DIVE CAFE",
+    "amount": 80.0,
+    "type": "expense",
+    "source_page": 30
+  },
+  {
+    "date": "2026-09-13",
+    "merchant": "SREEFOODZ",
+    "description": "UPI Payment to SREEFOODZ",
+    "amount": 75.0,
+    "type": "expense",
+    "source_page": 30
+  },
+  {
+    "date": "2026-09-20",
+    "merchant": "YENDADA",
+    "description": "UPI Payment to YENDADA",
+    "amount": 51.0,
+    "type": "expense",
+    "source_page": 31
+  },
+  {
+    "date": "2026-09-11",
+    "merchant": "KORIBILLISUNIL",
+    "description": "UPI Payment to KORIBILLISUNIL",
+    "amount": 50.0,
+    "type": "expense",
+    "source_page": 31
+  },
+  {
+    "date": "2026-09-02",
+    "merchant": "DIVE CAFE",
+    "description": "UPI Payment to DIVE CAFE",
+    "amount": 40.0,
+    "type": "expense",
+    "source_page": 31
+  },
+  {
+    "date": "2026-09-30",
+    "merchant": "OMMI VENKATALAKSHMI",
+    "description": "UPI Payment to OMMI VENKATALAKSHMI",
+    "amount": 35.0,
+    "type": "expense",
+    "source_page": 31
+  },
+  {
+    "date": "2026-09-29",
+    "merchant": "SRI MODARAMMA THALLIT",
+    "description": "UPI Payment to SRI MODARAMMA THALLIT",
+    "amount": 30.0,
+    "type": "expense",
+    "source_page": 32
+  },
+  {
+    "date": "2026-09-09",
+    "merchant": "GUMMADIMANGARUCHAL",
+    "description": "UPI Payment to GUMMADIMANGARUCHAL",
+    "amount": 20.0,
+    "type": "expense",
+    "source_page": 32
+  },
+  {
+    "date": "2026-09-03",
+    "merchant": "Nali Prem Surya Swaroop",
+    "description": "UPI Payment to Nali Prem Surya Swaroop",
+    "amount": 20.0,
+    "type": "expense",
+    "source_page": 32
+  },
+  {
+    "date": "2026-09-03",
+    "merchant": "KORIBILLISUNIL",
+    "description": "UPI Payment to KORIBILLISUNIL",
+    "amount": 20.0,
+    "type": "expense",
+    "source_page": 32
+  },
+  {
+    "date": "2026-08-01",
+    "merchant": "Bank Inward Transfer / Salary Credit",
+    "description": "August Verified UPI Inflow & Salary Deposit",
+    "amount": 12370.0,
+    "type": "income",
+    "source_page": 33
+  },
+  {
+    "date": "2026-08-17",
+    "merchant": "THE FIT HUB",
+    "description": "UPI Payment to THE FIT HUB",
+    "amount": 3000.0,
+    "type": "expense",
+    "source_page": 34
+  },
+  {
+    "date": "2026-08-01",
+    "merchant": "AJIO COM",
+    "description": "UPI Payment to AJIO COM",
+    "amount": 1735.0,
+    "type": "expense",
+    "source_page": 34
+  },
+  {
+    "date": "2026-08-14",
+    "merchant": "Nykaa ERetail Private Lim..",
+    "description": "UPI Payment to Nykaa ERetail Private Lim..",
+    "amount": 1486.0,
+    "type": "expense",
+    "source_page": 34
+  },
+  {
+    "date": "2026-08-09",
+    "merchant": "Amazon India",
+    "description": "UPI Payment to Amazon India",
+    "amount": 1303.63,
+    "type": "expense",
+    "source_page": 34
+  },
+  {
+    "date": "2026-08-02",
+    "merchant": "WWW SAVANA COM",
+    "description": "UPI Payment to WWW SAVANA COM",
+    "amount": 1146.0,
+    "type": "expense",
+    "source_page": 34
+  },
+  {
+    "date": "2026-08-15",
+    "merchant": "SWIGGY INSTAMART",
+    "description": "UPI Payment to SWIGGY INSTAMART",
+    "amount": 501.0,
+    "type": "expense",
+    "source_page": 34
+  },
+  {
+    "date": "2026-08-16",
+    "merchant": "SWIGGY INSTAMART",
+    "description": "UPI Payment to SWIGGY INSTAMART",
+    "amount": 501.0,
+    "type": "expense",
+    "source_page": 35
+  },
+  {
+    "date": "2026-08-22",
+    "merchant": "SWIGGY INSTAMART PRIV..",
+    "description": "UPI Payment to SWIGGY INSTAMART PRIV..",
+    "amount": 496.0,
+    "type": "expense",
+    "source_page": 35
+  },
+  {
+    "date": "2026-08-16",
+    "merchant": "SWIGGY",
+    "description": "UPI Payment to SWIGGY",
+    "amount": 292.0,
+    "type": "expense",
+    "source_page": 35
+  },
+  {
+    "date": "2026-08-11",
+    "merchant": "Cream Stone Yendada",
+    "description": "UPI Payment to Cream Stone Yendada",
+    "amount": 270.0,
+    "type": "expense",
+    "source_page": 35
+  },
+  {
+    "date": "2026-08-05",
+    "merchant": "YENDADA",
+    "description": "UPI Payment to YENDADA",
+    "amount": 210.0,
+    "type": "expense",
+    "source_page": 35
+  },
+  {
+    "date": "2026-08-15",
+    "merchant": "SWIGGY",
+    "description": "UPI Payment to SWIGGY",
+    "amount": 207.0,
+    "type": "expense",
+    "source_page": 35
+  },
+  {
+    "date": "2026-08-15",
+    "merchant": "KORIBILLISUNIL",
+    "description": "UPI Payment to KORIBILLISUNIL",
+    "amount": 200.0,
+    "type": "expense",
+    "source_page": 35
+  },
+  {
+    "date": "2026-08-14",
+    "merchant": "KORIBILLI SUNIL",
+    "description": "UPI Payment to KORIBILLI SUNIL",
+    "amount": 200.0,
+    "type": "expense",
+    "source_page": 36
+  },
+  {
+    "date": "2026-08-27",
+    "merchant": "MORE",
+    "description": "UPI Payment to MORE",
+    "amount": 182.0,
+    "type": "expense",
+    "source_page": 36
+  },
+  {
+    "date": "2026-08-20",
+    "merchant": "SWIGGY",
+    "description": "UPI Payment to SWIGGY",
+    "amount": 169.0,
+    "type": "expense",
+    "source_page": 36
+  },
+  {
+    "date": "2026-08-09",
+    "merchant": "Swiggy Ltd",
+    "description": "UPI Payment to Swiggy Ltd",
+    "amount": 169.0,
+    "type": "expense",
+    "source_page": 36
+  },
+  {
+    "date": "2026-08-03",
+    "merchant": "Swiggy Ltd",
+    "description": "UPI Payment to Swiggy Ltd",
+    "amount": 169.0,
+    "type": "expense",
+    "source_page": 36
+  },
+  {
+    "date": "2026-08-05",
+    "merchant": "Swiggy Ltd",
+    "description": "UPI Payment to Swiggy Ltd",
+    "amount": 163.0,
+    "type": "expense",
+    "source_page": 36
+  },
+  {
+    "date": "2026-08-04",
+    "merchant": "SWIGGY",
+    "description": "UPI Payment to SWIGGY",
+    "amount": 159.0,
+    "type": "expense",
+    "source_page": 37
+  },
+  {
+    "date": "2026-08-04",
+    "merchant": "Swiggy Ltd",
+    "description": "UPI Payment to Swiggy Ltd",
+    "amount": 148.0,
+    "type": "expense",
+    "source_page": 37
+  },
+  {
+    "date": "2026-08-22",
+    "merchant": "SWIGGYINSTAMART",
+    "description": "UPI Payment to SWIGGYINSTAMART",
+    "amount": 146.0,
+    "type": "expense",
+    "source_page": 37
+  },
+  {
+    "date": "2026-08-13",
+    "merchant": "SREEFOODZ",
+    "description": "UPI Payment to SREEFOODZ",
+    "amount": 140.0,
+    "type": "expense",
+    "source_page": 37
+  },
+  {
+    "date": "2026-08-06",
+    "merchant": "SREEFOODZ",
+    "description": "UPI Payment to SREEFOODZ",
+    "amount": 135.0,
+    "type": "expense",
+    "source_page": 37
+  },
+  {
+    "date": "2026-08-27",
+    "merchant": "MORE",
+    "description": "UPI Payment to MORE",
+    "amount": 115.0,
+    "type": "expense",
+    "source_page": 37
+  },
+  {
+    "date": "2026-08-17",
+    "merchant": "Bezawada Homefoods",
+    "description": "UPI Payment to Bezawada Homefoods",
+    "amount": 100.0,
+    "type": "expense",
+    "source_page": 38
+  },
+  {
+    "date": "2026-08-13",
+    "merchant": "GATOXRUSHIKONDA",
+    "description": "UPI Payment to GATOXRUSHIKONDA",
+    "amount": 100.0,
+    "type": "expense",
+    "source_page": 38
+  },
+  {
+    "date": "2026-08-16",
+    "merchant": "MORE",
+    "description": "UPI Payment to MORE",
+    "amount": 86.08,
+    "type": "expense",
+    "source_page": 38
+  },
+  {
+    "date": "2026-08-02",
+    "merchant": "YENDADA",
+    "description": "UPI Payment to YENDADA",
+    "amount": 70.0,
+    "type": "expense",
+    "source_page": 38
+  },
+  {
+    "date": "2026-08-09",
+    "merchant": "YENDADA",
+    "description": "UPI Payment to YENDADA",
+    "amount": 52.0,
+    "type": "expense",
+    "source_page": 39
+  },
+  {
+    "date": "2026-08-30",
+    "merchant": "SRI MANIKANDA SWEETS A..",
+    "description": "UPI Payment to SRI MANIKANDA SWEETS A..",
+    "amount": 50.0,
+    "type": "expense",
+    "source_page": 39
+  },
+  {
+    "date": "2026-08-06",
+    "merchant": "BABA BAZAR",
+    "description": "UPI Payment to BABA BAZAR",
+    "amount": 35.0,
+    "type": "expense",
+    "source_page": 39
+  },
+  {
+    "date": "2026-08-29",
+    "merchant": "KORIBILLISUNIL",
+    "description": "UPI Payment to KORIBILLISUNIL",
+    "amount": 30.0,
+    "type": "expense",
+    "source_page": 39
+  },
+  {
+    "date": "2026-08-05",
+    "merchant": "MrsThotaLaxmi",
+    "description": "UPI Payment to MrsThotaLaxmi",
+    "amount": 30.0,
+    "type": "expense",
+    "source_page": 39
+  },
+  {
+    "date": "2026-07-01",
+    "merchant": "Bank Inward Transfer / Salary Credit",
+    "description": "July Verified UPI Inflow & Salary Deposit",
+    "amount": 15427.0,
+    "type": "income",
+    "source_page": 40
+  },
+  {
+    "date": "2026-07-17",
+    "merchant": "THE FIT HUB",
+    "description": "UPI Payment to THE FIT HUB",
+    "amount": 3000.0,
+    "type": "expense",
+    "source_page": 41
+  },
+  {
+    "date": "2026-07-28",
+    "merchant": "Puma Sports India Pvt...",
+    "description": "UPI Payment to Puma Sports India Pvt...",
+    "amount": 2674.74,
+    "type": "expense",
+    "source_page": 41
+  },
+  {
+    "date": "2026-07-05",
+    "merchant": "Amazon India",
+    "description": "UPI Payment to Amazon India",
+    "amount": 1278.02,
+    "type": "expense",
+    "source_page": 41
+  },
+  {
+    "date": "2026-07-01",
+    "merchant": "BONKERSCORNER",
+    "description": "UPI Payment to BONKERSCORNER",
+    "amount": 1075.15,
+    "type": "expense",
+    "source_page": 41
+  },
+  {
+    "date": "2026-07-05",
+    "merchant": "WWW SAVANA COM",
+    "description": "UPI Payment to WWW SAVANA COM",
+    "amount": 887.0,
+    "type": "expense",
+    "source_page": 41
+  },
+  {
+    "date": "2026-07-15",
+    "merchant": "SWIGGY INSTAMART",
+    "description": "UPI Payment to SWIGGY INSTAMART",
+    "amount": 688.0,
+    "type": "expense",
+    "source_page": 41
+  },
+  {
+    "date": "2026-07-26",
+    "merchant": "SWIGGYINSTAMART",
+    "description": "UPI Payment to SWIGGYINSTAMART",
+    "amount": 688.0,
+    "type": "expense",
+    "source_page": 42
+  },
+  {
+    "date": "2026-07-15",
+    "merchant": "MALIREDDY SATYARANI",
+    "description": "UPI Payment to MALIREDDY SATYARANI",
+    "amount": 600.0,
+    "type": "expense",
+    "source_page": 42
+  },
+  {
+    "date": "2026-07-18",
+    "merchant": "AJIO",
+    "description": "UPI Payment to AJIO",
+    "amount": 532.0,
+    "type": "expense",
+    "source_page": 42
+  },
+  {
+    "date": "2026-07-07",
+    "merchant": "Nykaa Fashion",
+    "description": "UPI Payment to Nykaa Fashion",
+    "amount": 470.0,
+    "type": "expense",
+    "source_page": 42
+  },
+  {
+    "date": "2026-07-05",
+    "merchant": "Amazon India",
+    "description": "UPI Payment to Amazon India",
+    "amount": 464.62,
+    "type": "expense",
+    "source_page": 42
+  },
+  {
+    "date": "2026-07-15",
+    "merchant": "COMFORTIN",
+    "description": "UPI Payment to COMFORTIN",
+    "amount": 327.0,
+    "type": "expense",
+    "source_page": 42
+  },
+  {
+    "date": "2026-07-03",
+    "merchant": "SWIGGY",
+    "description": "UPI Payment to SWIGGY",
+    "amount": 267.0,
+    "type": "expense",
+    "source_page": 43
+  },
+  {
+    "date": "2026-07-31",
+    "merchant": "AMAR PAN SHOP",
+    "description": "UPI Payment to AMAR PAN SHOP",
+    "amount": 240.0,
+    "type": "expense",
+    "source_page": 43
+  },
+  {
+    "date": "2026-07-04",
+    "merchant": "Swiggy Ltd",
+    "description": "UPI Payment to Swiggy Ltd",
+    "amount": 238.0,
+    "type": "expense",
+    "source_page": 43
+  },
+  {
+    "date": "2026-07-03",
+    "merchant": "SUBWAYYENDADA",
+    "description": "UPI Payment to SUBWAYYENDADA",
+    "amount": 230.0,
+    "type": "expense",
+    "source_page": 43
+  },
+  {
+    "date": "2026-07-09",
+    "merchant": "APOLLOPHARMACY",
+    "description": "UPI Payment to APOLLOPHARMACY",
+    "amount": 218.0,
+    "type": "expense",
+    "source_page": 43
+  },
+  {
+    "date": "2026-07-17",
+    "merchant": "Swiggy Ltd",
+    "description": "UPI Payment to Swiggy Ltd",
+    "amount": 214.0,
+    "type": "expense",
+    "source_page": 43
+  },
+  {
+    "date": "2026-07-02",
+    "merchant": "SUBWAYYENDADA",
+    "description": "UPI Payment to SUBWAYYENDADA",
+    "amount": 207.0,
+    "type": "expense",
+    "source_page": 44
+  },
+  {
+    "date": "2026-07-13",
+    "merchant": "SWIGGY",
+    "description": "UPI Payment to SWIGGY",
+    "amount": 206.0,
+    "type": "expense",
+    "source_page": 44
+  },
+  {
+    "date": "2026-07-01",
+    "merchant": "KATYAYANIFOODS",
+    "description": "UPI Payment to KATYAYANIFOODS",
+    "amount": 180.0,
+    "type": "expense",
+    "source_page": 44
+  },
+  {
+    "date": "2026-07-01",
+    "merchant": "Swiggy Ltd",
+    "description": "UPI Payment to Swiggy Ltd",
+    "amount": 169.0,
+    "type": "expense",
+    "source_page": 44
+  },
+  {
+    "date": "2026-07-09",
+    "merchant": "Chaina town",
+    "description": "UPI Payment to Chaina town",
+    "amount": 140.0,
+    "type": "expense",
+    "source_page": 44
+  },
+  {
+    "date": "2026-07-08",
+    "merchant": "Chaina town",
+    "description": "UPI Payment to Chaina town",
+    "amount": 140.0,
+    "type": "expense",
+    "source_page": 44
+  },
+  {
+    "date": "2026-07-24",
+    "merchant": "FRESHCHOICEYENDADA",
+    "description": "UPI Payment to FRESHCHOICEYENDADA",
+    "amount": 109.0,
+    "type": "expense",
+    "source_page": 45
+  },
+  {
+    "date": "2026-07-10",
+    "merchant": "BezawadaHomefoods",
+    "description": "UPI Payment to BezawadaHomefoods",
+    "amount": 65.0,
+    "type": "expense",
+    "source_page": 45
+  },
+  {
+    "date": "2026-07-08",
+    "merchant": "MALIREDDYSATYARANI",
+    "description": "UPI Payment to MALIREDDYSATYARANI",
+    "amount": 50.0,
+    "type": "expense",
+    "source_page": 45
+  },
+  {
+    "date": "2026-07-06",
+    "merchant": "Bezawada Homefoods",
+    "description": "UPI Payment to Bezawada Homefoods",
+    "amount": 50.0,
+    "type": "expense",
+    "source_page": 46
+  },
+  {
+    "date": "2026-07-07",
+    "merchant": "Piyush fast food",
+    "description": "UPI Payment to Piyush fast food",
+    "amount": 40.0,
+    "type": "expense",
+    "source_page": 46
+  },
+  {
+    "date": "2026-07-30",
+    "merchant": "YENDADA",
+    "description": "UPI Payment to YENDADA",
+    "amount": 30.0,
+    "type": "expense",
+    "source_page": 46
+  },
+  {
+    "date": "2026-07-09",
+    "merchant": "MAHAPATROANJANKUMAR",
+    "description": "UPI Payment to MAHAPATROANJANKUMAR",
+    "amount": 30.0,
+    "type": "expense",
+    "source_page": 46
+  },
+  {
+    "date": "2026-07-03",
+    "merchant": "NARAYANAMMAVEGETABLE",
+    "description": "UPI Payment to NARAYANAMMAVEGETABLE",
+    "amount": 30.0,
+    "type": "expense",
+    "source_page": 46
+  },
+  {
+    "date": "2026-07-28",
+    "merchant": "RAMALAXMI",
+    "description": "UPI Payment to RAMALAXMI",
+    "amount": 20.0,
+    "type": "expense",
+    "source_page": 47
+  },
+  {
+    "date": "2026-07-20",
+    "merchant": "MUSTAFA EZZI",
+    "description": "UPI Payment to MUSTAFA EZZI",
+    "amount": 20.0,
+    "type": "expense",
+    "source_page": 47
+  },
+  {
+    "date": "2026-07-14",
+    "merchant": "MALIREDDYSATYARANI",
+    "description": "UPI Payment to MALIREDDYSATYARANI",
+    "amount": 20.0,
+    "type": "expense",
+    "source_page": 47
+  },
+  {
+    "date": "2026-07-01",
+    "merchant": "Piyush fast food",
+    "description": "UPI Payment to Piyush fast food",
+    "amount": 15.0,
+    "type": "expense",
+    "source_page": 47
+  },
+  {
+    "date": "2026-06-01",
+    "merchant": "Bank Inward Transfer / Salary Credit",
+    "description": "June Verified UPI Inflow & Salary Deposit",
+    "amount": 16360.0,
+    "type": "income",
+    "source_page": 48
+  },
+  {
+    "date": "2026-06-19",
+    "merchant": "SANTOSH KUMAR BALIV..",
+    "description": "UPI Payment to SANTOSH KUMAR BALIV..",
+    "amount": 3000.0,
+    "type": "expense",
+    "source_page": 49
+  },
+  {
+    "date": "2026-06-04",
+    "merchant": "Myntra",
+    "description": "UPI Payment to Myntra",
+    "amount": 2152.0,
+    "type": "expense",
+    "source_page": 49
+  },
+  {
+    "date": "2026-06-04",
+    "merchant": "ADDA247",
+    "description": "UPI Payment to ADDA247",
+    "amount": 2000.0,
+    "type": "expense",
+    "source_page": 49
+  },
+  {
+    "date": "2026-06-08",
+    "merchant": "APOLLOPHARMACY",
+    "description": "UPI Payment to APOLLOPHARMACY",
+    "amount": 1694.16,
+    "type": "expense",
+    "source_page": 49
+  },
+  {
+    "date": "2026-06-29",
+    "merchant": "H and M HENNES and MA..",
+    "description": "UPI Payment to H and M HENNES and MA..",
+    "amount": 1147.0,
+    "type": "expense",
+    "source_page": 49
+  },
+  {
+    "date": "2026-06-15",
+    "merchant": "Envogue Styles Global LLP",
+    "description": "UPI Payment to Envogue Styles Global LLP",
+    "amount": 1057.0,
+    "type": "expense",
+    "source_page": 49
+  },
+  {
+    "date": "2026-06-29",
+    "merchant": "Envogue Styles Global LLP",
+    "description": "UPI Payment to Envogue Styles Global LLP",
+    "amount": 1057.0,
+    "type": "expense",
+    "source_page": 50
+  },
+  {
+    "date": "2026-06-03",
+    "merchant": "BUSYBEES LOGISTICS..",
+    "description": "UPI Payment to BUSYBEES LOGISTICS..",
+    "amount": 735.3,
+    "type": "expense",
+    "source_page": 50
+  },
+  {
+    "date": "2026-06-09",
+    "merchant": "Amazon Pay Groceries",
+    "description": "UPI Payment to Amazon Pay Groceries",
+    "amount": 561.78,
+    "type": "expense",
+    "source_page": 50
+  },
+  {
+    "date": "2026-06-09",
+    "merchant": "GURRALAANNAPOORNA",
+    "description": "UPI Payment to GURRALAANNAPOORNA",
+    "amount": 500.0,
+    "type": "expense",
+    "source_page": 50
+  },
+  {
+    "date": "2026-06-24",
+    "merchant": "BIGTREE ENTERTAINM",
+    "description": "UPI Payment to BIGTREE ENTERTAINM",
+    "amount": 408.28,
+    "type": "expense",
+    "source_page": 50
+  },
+  {
+    "date": "2026-06-15",
+    "merchant": "BIGTREE ENTERTAINM.",
+    "description": "UPI Payment to BIGTREE ENTERTAINM.",
+    "amount": 408.28,
+    "type": "expense",
+    "source_page": 50
+  },
+  {
+    "date": "2026-06-08",
+    "merchant": "Gowri",
+    "description": "UPI Payment to Gowri",
+    "amount": 400.0,
+    "type": "expense",
+    "source_page": 51
+  },
+  {
+    "date": "2026-06-02",
+    "merchant": "SPARKFOODS",
+    "description": "UPI Payment to SPARKFOODS",
+    "amount": 364.0,
+    "type": "expense",
+    "source_page": 51
+  },
+  {
+    "date": "2026-06-28",
+    "merchant": "SWIGGYINSTAMART",
+    "description": "UPI Payment to SWIGGYINSTAMART",
+    "amount": 358.0,
+    "type": "expense",
+    "source_page": 51
+  },
+  {
+    "date": "2026-06-24",
+    "merchant": "MALIREDDYSATYARANI",
+    "description": "UPI Payment to MALIREDDYSATYARANI",
+    "amount": 260.0,
+    "type": "expense",
+    "source_page": 51
+  },
+  {
+    "date": "2026-06-18",
+    "merchant": "SWIGGY INSTAMART PRIV.",
+    "description": "UPI Payment to SWIGGY INSTAMART PRIV.",
+    "amount": 199.0,
+    "type": "expense",
+    "source_page": 51
+  },
+  {
+    "date": "2026-06-09",
+    "merchant": "SWIGGY INSTAMART PRIV.",
+    "description": "UPI Payment to SWIGGY INSTAMART PRIV.",
+    "amount": 192.0,
+    "type": "expense",
+    "source_page": 51
+  },
+  {
+    "date": "2026-06-30",
+    "merchant": "Swiggy Ltd",
+    "description": "UPI Payment to Swiggy Ltd",
+    "amount": 169.0,
+    "type": "expense",
+    "source_page": 52
+  },
+  {
+    "date": "2026-06-28",
+    "merchant": "SWIGGY",
+    "description": "UPI Payment to SWIGGY",
+    "amount": 169.0,
+    "type": "expense",
+    "source_page": 52
+  },
+  {
+    "date": "2026-06-17",
+    "merchant": "Swiggy Ltd",
+    "description": "UPI Payment to Swiggy Ltd",
+    "amount": 169.0,
+    "type": "expense",
+    "source_page": 52
+  },
+  {
+    "date": "2026-06-09",
+    "merchant": "Swiggy",
+    "description": "UPI Payment to Swiggy",
+    "amount": 169.0,
+    "type": "expense",
+    "source_page": 52
+  },
+  {
+    "date": "2026-06-07",
+    "merchant": "Swiggy Ltd",
+    "description": "UPI Payment to Swiggy Ltd",
+    "amount": 169.0,
+    "type": "expense",
+    "source_page": 52
+  },
+  {
+    "date": "2026-06-01",
+    "merchant": "Swiggy Ltd",
+    "description": "UPI Payment to Swiggy Ltd",
+    "amount": 169.0,
+    "type": "expense",
+    "source_page": 52
+  },
+  {
+    "date": "2026-06-01",
+    "merchant": "PUSARLARAMU",
+    "description": "UPI Payment to PUSARLARAMU",
+    "amount": 100.0,
+    "type": "expense",
+    "source_page": 53
+  },
+  {
+    "date": "2026-06-29",
+    "merchant": "Baba Bazar",
+    "description": "UPI Payment to Baba Bazar",
+    "amount": 80.0,
+    "type": "expense",
+    "source_page": 53
+  },
+  {
+    "date": "2026-06-26",
+    "merchant": "YENDADA",
+    "description": "UPI Payment to YENDADA",
+    "amount": 73.5,
+    "type": "expense",
+    "source_page": 54
+  },
+  {
+    "date": "2026-06-30",
+    "merchant": "AAUTOPAY",
+    "description": "UPI Payment to AAUTOPAY",
+    "amount": 69.0,
+    "type": "expense",
+    "source_page": 54
+  },
+  {
+    "date": "2026-06-24",
+    "merchant": "VEE MART",
+    "description": "UPI Payment to VEE MART",
+    "amount": 50.0,
+    "type": "expense",
+    "source_page": 54
+  },
+  {
+    "date": "2026-06-11",
+    "merchant": "GURRALAANNAPOORNA",
+    "description": "UPI Payment to GURRALAANNAPOORNA",
+    "amount": 50.0,
+    "type": "expense",
+    "source_page": 54
+  },
+  {
+    "date": "2026-06-15",
+    "merchant": "FULCHANDPANIPURI",
+    "description": "UPI Payment to FULCHANDPANIPURI",
+    "amount": 40.0,
+    "type": "expense",
+    "source_page": 54
+  },
+  {
+    "date": "2026-06-02",
+    "merchant": "MADABATHULARAMA",
+    "description": "UPI Payment to MADABATHULARAMA",
+    "amount": 40.0,
+    "type": "expense",
+    "source_page": 54
+  },
+  {
+    "date": "2026-06-12",
+    "merchant": "VEE MART",
+    "description": "UPI Payment to VEE MART",
+    "amount": 35.0,
+    "type": "expense",
+    "source_page": 55
+  },
+  {
+    "date": "2026-06-06",
+    "merchant": "SRI MODARAMMA THALLI T",
+    "description": "UPI Payment to SRI MODARAMMA THALLI T",
+    "amount": 35.0,
+    "type": "expense",
+    "source_page": 55
+  },
+  {
+    "date": "2026-06-05",
+    "merchant": "GITAMBOYSHOSTEL",
+    "description": "UPI Payment to GITAMBOYSHOSTEL",
+    "amount": 34.0,
+    "type": "expense",
+    "source_page": 55
+  },
+  {
+    "date": "2026-06-04",
+    "merchant": "GITAMBOYSHOSTEL",
+    "description": "UPI Payment to GITAMBOYSHOSTEL",
+    "amount": 34.0,
+    "type": "expense",
+    "source_page": 55
+  },
+  {
+    "date": "2026-06-22",
+    "merchant": "VEE MART",
+    "description": "UPI Payment to VEE MART",
+    "amount": 30.0,
+    "type": "expense",
+    "source_page": 55
+  },
+  {
+    "date": "2026-06-19",
+    "merchant": "SRIDEVIXEROX",
+    "description": "UPI Payment to SRIDEVIXEROX",
+    "amount": 30.0,
+    "type": "expense",
+    "source_page": 55
+  },
+  {
+    "date": "2026-06-17",
+    "merchant": "BABABAZAR",
+    "description": "UPI Payment to BABABAZAR",
+    "amount": 30.0,
+    "type": "expense",
+    "source_page": 56
+  },
+  {
+    "date": "2026-06-15",
+    "merchant": "BABA BAZAR",
+    "description": "UPI Payment to BABA BAZAR",
+    "amount": 30.0,
+    "type": "expense",
+    "source_page": 56
+  },
+  {
+    "date": "2026-06-14",
+    "merchant": "SRI MODARAMMA THALLI T..",
+    "description": "UPI Payment to SRI MODARAMMA THALLI T..",
+    "amount": 30.0,
+    "type": "expense",
+    "source_page": 56
+  },
+  {
+    "date": "2026-06-05",
+    "merchant": "PRASAD STATIONERY AND..",
+    "description": "UPI Payment to PRASAD STATIONERY AND..",
+    "amount": 25.0,
+    "type": "expense",
+    "source_page": 56
+  },
+  {
+    "date": "2026-06-16",
+    "merchant": "BABA BAZAR",
+    "description": "UPI Payment to BABA BAZAR",
+    "amount": 20.0,
+    "type": "expense",
+    "source_page": 56
+  },
+  {
+    "date": "2026-06-14",
+    "merchant": "SAMATHAKIRANA",
+    "description": "UPI Payment to SAMATHAKIRANA",
+    "amount": 20.0,
+    "type": "expense",
+    "source_page": 56
+  },
+  {
+    "date": "2026-06-01",
+    "merchant": "Prasad stationary 2",
+    "description": "UPI Payment to Prasad stationary 2",
+    "amount": 20.0,
+    "type": "expense",
+    "source_page": 57
+  },
+  {
+    "date": "2026-06-02",
+    "merchant": "BHAVANAM SATYASAHITHI",
+    "description": "UPI Payment to BHAVANAM SATYASAHITHI",
+    "amount": 15.0,
+    "type": "expense",
+    "source_page": 57
+  },
+  {
+    "date": "2026-06-15",
+    "merchant": "GANDI BOOK'S AND STATIO.",
+    "description": "UPI Payment to GANDI BOOK'S AND STATIO.",
+    "amount": 14.0,
+    "type": "expense",
+    "source_page": 57
+  },
+  {
+    "date": "2026-06-03",
+    "merchant": "Prasad stationary 2",
+    "description": "UPI Payment to Prasad stationary 2",
+    "amount": 10.0,
+    "type": "expense",
+    "source_page": 57
+  }
+]
